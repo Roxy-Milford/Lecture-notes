@@ -1,0 +1,60 @@
+\documentclass{ext_book}  
+
+%\input{../packages}  		% Додаткові пакети вносіть у цей файл
+%\input{../redefinitions} 	% Додаткові визначення та перевизначення команд вносіть у цей файл
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Титульна сторінка %%%%%%%%%%%%%%%%%%%
+\input{title}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Зміст %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{1}    %!!! -- продумати, як автоматизувати номер сторінки
+
+%\begingroup
+%\let\cleardoublepage\relax
+%\let\clearpage\relax
+\tableofcontents
+%\endgroup
+
+%%% \cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%% Вступ %%%%%%%%%%%%%%%%%%%%%
+%\input{intro}
+
+
+%%%%%%%%%%%%%%%%%%%%% Основна частина %%%%%%%%%%%%%%%%%%%%%
+%\input{../algeom/algeom}
+
+\input{Chapters/ch_01}
+%\input{Chapters/ch_02}
+%\input{Chapters/ch_03}
+%\input{Chapters/ch_04}
+%\input{Chapters/ch_05}
+%\input{Chapters/ch_06}
+%\input{Chapters/ch_07}
+%\input{Chapters/ch_08}
+%\input{Chapters/ch_09}
+%\input{Chapters/ch_10}
+%\input{Chapters/ch_11}
+
+%\input{Chapters/ch_lit}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Висновки %%%%%%%%%%%%%%%%%%%%%%%%
+%%% \conclusions
+%%% \input{conclusions}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Бібліографія %%%%%%%%%%%%%%%%%%%%%%%
+%\begin{thebibliography}{9}
+%\input{bibliography} 
+%\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Додатки %%%%%%%%%%%%%%%%%%%%%%%%%
+%%% \input{algeom/appendix}
+
+\end{document}

@@ -1,0 +1,15 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Векторна алгебра}{3}%
+\contentsline {section}{\numberline {1.1}Вектори на прямій, на площині, у просторі}{3}%
+\contentsline {section}{\numberline {1.2}Лінійні операції над векторами}{4}%
+\contentsline {section}{\numberline {1.3}Властивості лінійних операцій, аксіоми векторної алгебри}{5}%
+\contentsline {section}{\numberline {1.4}Базис на прямій, на площині, у просторі}{5}%
+\contentsline {section}{\numberline {1.5}Декартів прямокутний базис}{7}%
+\contentsline {section}{\numberline {1.6}Проекція вектора на вектор (або на вісь)}{7}%
+\contentsline {section}{\numberline {1.7}Множення векторів. Скалярний добуток двох векторів}{8}%
+\contentsline {section}{\numberline {1.8}Скалярний добуток в координатах}{8}%
+\contentsline {section}{\numberline {1.9}Нормування вектора}{9}%
+\contentsline {section}{\numberline {1.10}Векторний добуток двох векторів}{10}%
+\contentsline {section}{\numberline {1.11}Векторний добуток в координатах}{11}%
+\contentsline {section}{\numberline {1.12}Мішаний добуток трьох векторів}{12}%
+\contentsline {section}{\numberline {1.13}Мішаний добуток в координатах}{13}%

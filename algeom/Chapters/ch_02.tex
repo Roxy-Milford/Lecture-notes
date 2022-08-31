@@ -1,0 +1,323 @@
+\chapter{Визначники і лінійна залежність}
+
+
+\section{Визначники другого і третього порядків}
+
+\begin{definition}
+	\textbf{Матриця $A$, розміром $m \times n$} --- це прямокутна таблицю чисел з
+	$m$ рядків та $n$ стовпчиків:
+	
+	$$A = \begin{pmatrix}
+		a_{11}	& a_{12}	& ...	& a_{1n}  \\
+		a_{21}	& a_{22}	& ...	& a_{2n}  \\
+		...		& ...		& ...	& ...     \\
+		a_{m1}	& a_{m2}	& ...	& a_{mn}  \\
+	\end{pmatrix}.$$
+\end{definition}
+
+Позначають матриці і в такий спосіб: $A = (a_{ij})_{i=1, ..., m,\, j=1, ..., n}$, де $a_{ij}$ --- це елемент
+матриці, що стоїть в $i$-му рядку та $j$-му стовпчику.
+
+Нехай A – квадратна матриця другого порядку (тобто $2 \times 2$).
+
+\begin{definition}
+	\textbf{Визначник матриці (детермінант матриці) $A$ другого порядку} --- це число, яке знаходиться за формулою:
+	$$\det A = |A| = \left| \begin{matrix}
+		x_1 & y_1 \\
+		x_2 & y_2 \\
+	\end{matrix} \right| = x_1y_2 - x_2y_1$$
+\end{definition}
+
+\begin{definition}
+	\textbf{Визначник матриці (детермінант матриці) $A$ третього порядку} ---  це число, яке знаходиться за формулою (правило ''зірочки''): 
+	$$\det A = |A| = \left| \begin{matrix}
+		x_1 & y_1 & z_1 \\
+		x_2 & y_2 & z_2 \\
+		x_3 & y_3 & z_3 \\
+	\end{matrix} \right| = x_1y_2z_3 + x_3y_1z_2 + x_2y_3z_1 - x_3y_2z_1 - x_2y_1z_3 - x_1y_3z_2$$
+\end{definition}
+
+Ця формула нам вже відома, адже саме так ми шукали мішаний добуток
+векторів $\overline{a}, \overline{b}, \overline{c}$, які в базисі
+$\{\overline{i}, \overline{j}, \overline{k}\}$ мають координати
+$\overline{a} = (x_1, y_1, z_1), \overline{b} = (x_2, y_2, z_2), \overline{c} = (x_3, y_3, z_3)$
+
+\section{Властивості визначників}
+
+Усі властивості будемо формулювати і доводити для визначників 3-го порядку.
+Але, як ми побачимо пізніше, усі наведені властивості будуть
+виконуватися і для визначників довільного порядку.
+
+Нехай $A$ квадратна матриця третього порядку, тоді $\det A = \overline{a}\overline{b}\overline{c}$,
+де $\overline{a} = (x_1, y_1, z_1), \overline{b} = (x_2, y_2, z_2), \overline{c} = (x_3, y_3, z_3)$.
+
+\begin{definition}
+	\textbf{Транспонована матриця} --- це матриця $A^T$, отримана шляхом транспонування (транспоновки) елементів матриці $A$, тобто стовпчики і рядки, міняються місцями: $A^T = (a_{ij}^T)$, де $a_{ij}^T = a_{ji}$.
+\end{definition}
+
+Нехай $A = \begin{pmatrix}
+	a_{11} & a_{12} & a_{13} \\
+	a_{21} & a_{22} & a_{23} \\
+	a_{31} & a_{32} & a_{33} \\
+\end{pmatrix}$.
+
+\begin{definition}
+	\textbf{Мінор $M_{ij}$, елемента $a_{ij}$} --- це визначник матриці, яка отримана з
+	матриці A викреслюванням $i$-го рядка та $j$-го стовпчика. 
+\end{definition}
+
+Наприклад: $M_{23} = \left|\begin{matrix}
+	a_{11} & a_{12} \\
+	a_{31} & a_{32} \\
+\end{matrix}\right| = a_{11}a_{32} - a_{12}a_{31}$.
+
+\begin{definition}
+	\textbf{Алгебраїчне доповнення елемента $a_{ij}$} --- це добуток $A_{ij} = (-1)^{i+j}M_{ij}$.
+\end{definition}
+
+\subsection*{Властивості визначників:}
+
+1) При транспонуванні матриці значення її визначника не зміниться: 
+$$\det A = \det A^T$$
+\begin{proof}
+	Доведення випливає безпосередньо з правила “зірочки”
+	
+	$\det A^T = \left|\begin{matrix}
+		x_1 & x_2 & x_3 \\
+		y_1 & y_2 & y_3 \\
+		z_1 & z_2 & z_3 \\
+	\end{matrix}\right|
+	= x_1y_2z_3 + x_3y_1z_2 + x_2y_3z_1 - x_3y_2z_1 - x_2y_1z_3 - x_1y_3z_2 = \det A$
+
+	Ця властивість урівнює в “правах” стовпчики і рядки. Тому далі всі властивості будемо формулювати для рядків.
+\end{proof}
+
+2) Знак визначника змінюється, якщо будь-які два рядки поміняти місцями:
+$$D(\overline{a}, \overline{b}, \overline{c}) = -D(\overline{b}, \overline{a}, \overline{c}) = -D(\overline{a}, \overline{c}, \overline{b}) = -D(\overline{c}, \overline{b}, \overline{a})$$
+
+3) Спільний множник можна винести з довільного рядка за визначник:
+$$D(\alpha\overline{a}, \overline{b}, \overline{c}) = D(\overline{a}, \alpha\overline{b}, \overline{c}) = D(\overline{a}, \overline{b}, \alpha\overline{c}) = \alpha D(\overline{a}, \overline{b}, \overline{c})$$
+
+4) $D(\overline{a} + \overline{a}', \overline{b}, \overline{c}) = D(\alpha\overline{a}, \overline{b}, \overline{c}) + D(\alpha\overline{a}', \overline{b}, \overline{c})$
+
+5) Визначник, рядки якого пропорційні, дорівнює нулю: 
+$$D(\overline{a}, \alpha\overline{a}, \overline{c}) = 0$$
+
+6) Визначник, який має два однакових рядки, дорівнює нулю: 
+$$D(\overline{a}, \overline{a}, \overline{c}) = 0$$
+	
+7) Визначник матриці з нульовим рядком дорівнює нулю: 
+$$D(\overline{a}, \overline{0}, \overline{c}) = 0$$	
+	
+8) Визначник не змінюється, якщо до якогось його рядка додати лінійну
+комбінацію інших рядків:
+$$D(\overline{a}, \overline{b}, \overline{c} + \alpha\overline{a} + \beta\overline{b})
+= D(\overline{a}, \overline{b}, \overline{c})$$
+	
+\begin{proof}
+	$D(\overline{a}, \overline{b}, \overline{c} + \alpha\overline{a} + \beta\overline{b}) = D(\overline{a}, \overline{b}, \overline{c}) + D(\overline{a}, \overline{b}, \alpha\overline{a}) + D(\overline{a}, \overline{b}, \beta\overline{b}) = D(\overline{a}, \overline{b}, \overline{c})$
+\end{proof}
+	
+9) Визначник матриці $A$ дорівнює сумі добутків елементів будь-якого рядка на їх
+алгебраїчні доповнення. 
+	
+Наприклад: $\det A = a_{11}A_{11} + a_{12}A_{12} + a_{13}A_{13}$.
+
+Будемо казати, що в цьому прикладі ми розклали визначник за першим рядком.
+
+\begin{proof}
+	$\sum\limits_{i=1}^3 a_{1i}A_{1i}
+	= a_{11}\left|\begin{matrix}
+		a_{22} & a_{23} \\
+		a_{32} & a_{33} \\
+	\end{matrix} \right|
+	- a_{12}\left|\begin{matrix}
+		a_{21} & a_{23} \\
+		a_{31} & a_{33} \\
+	\end{matrix} \right|
+	+ a_{13}\left|\begin{matrix}
+		a_{21} & a_{22} \\
+		a_{31} & a_{32} \\
+	\end{matrix} \right|
+	= a_{11}(a_{22}a_{33} - a_{23}a_{32})
+	- a_{12}(a_{21}a_{33} - a_{23}a_{31})
+	+ a_{13}(a_{21}a_{32} - a_{22}a_{31})
+	= a_{11}a_{22}a_{33} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}
+	+ a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{11}a_{22}a_{31}
+	= \det A$.
+\end{proof}
+
+\begin{problem}
+	З’ясувати, чи можуть вектори $\overline{a} = (2, -1, 2), \overline{b} = (1, 2, -3), \overline{c} = (3, -4, 7)$ утворювати базис у просторі $E^3$?
+\end{problem}
+\begin{solution}
+	Вектори $\overline{a}, \overline{b}, \overline{c}$ будуть утворювати базис, якщо вони
+	некомпланарні. Тобто об’єм паралелепіпеда, на них побудованого, не повинен
+	дорівнювати нулю. Знайдемо мішаний добуток даних векторів:
+
+	$\overline{a}, \overline{b}, \overline{c}
+	= d(\overline{a}, \overline{b}, \overline{c})
+	= \left|\begin{matrix}
+		2  & -1  &  2  \\
+		1  &  2  & -3  \\
+		3  & -4  &  7  \\
+	\end{matrix}\right|
+	= \left|\begin{matrix}
+		0  & -1  &  0  \\
+		5  &  2  &  1  \\
+		-5 & -4  & -1  \\
+	\end{matrix}\right|
+	=-(-1)\left|\begin{matrix}
+		5  &  1  \\
+		-5 & -1  \\
+	\end{matrix}\right|
+	= 0$
+	
+	Для обчислення цього визначника ми спочатку 2-й
+	стовпчик помножили на 2 і
+	додали його до 1-го та 3-го стовпчиків, а потім скористались властивістю 9. Таким
+	чином, об’єм паралелепіпеда, побудованого на векторах $\overline{a}, \overline{b}$ і $\overline{c}$ дорівнює нулю,
+	тобто ці вектори лежать в одній площині і слугувати базисом не можуть.
+\end{solution}
+
+\section{Лінійна залежність векторів}
+
+Розглянемо систему векторів $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$.
+
+\begin{definition}
+	\textbf{Лінійна комбінація векторів} --- це вираз $\alpha_1\overline{a}_1 + \alpha_2\overline{a}_1 + ... + \alpha_n\overline{a}_n$, де $\alpha_i \in \mathbb{R}$.
+\end{definition}
+
+
+\begin{definition}
+	Лінійна комбінація векторів $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ --- це
+	\textbf{тривіальна лінійна комбінація}, якщо всі $\alpha_i = 0$,
+	і це \textbf{нетривіальна лінійна комбінація}, в протилежному випадку.
+\end{definition}
+
+\begin{definition}
+	\textbf{Лінійно залежні вектори} $\overline{a}_1, \overline{a}_2, ...,\overline{a}_n$ є такими ,якщо існують
+	такі числа $\alpha_1, \alpha_2, ..., \alpha_n$
+	що виконується рівність $\alpha_1\overline{a}_1 + \alpha_2\overline{a}_2 + ... + \alpha_n\overline{a}_n = \overline{0}$,
+	причому $|\alpha_1| + |\alpha_2| + ... + |\alpha_n| \neq 0$.
+\end{definition}
+
+\begin{definition}
+	\textbf{Лінійно незалежні вектори} --- це вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$, такі, що їх лінійна
+	комбінація дорівнює нулю лише за умови, коли всі $\alpha_i = 0$.
+\end{definition}
+
+Інакше кажучи, вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ є лінійно незалежними, якщо ніяка їх
+нетривіальна лінійна комбінація не дорівнює нульовому вектору. 
+
+\subsection*{Властивості:}
+
+\begin{claim}
+	Вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ – лінійно залежні тоді і тільки тоді, коли хоча б
+	один з них лінійно виражається через інші. 
+\end{claim}
+\begin{proof}
+	1) Нехай $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ --- це лінійно залежні вектори. Тоді
+    $\alpha_1\overline{a}_1 + ... + \alpha_i\overline{a}_i + ... + \alpha_n\overline{a}_n = \overline{0}$ та $\alpha_i \neq 0$ для деякого $i$ . Звідси випливає, що
+	$\overline{a}_i = -\dfrac{1}{\alpha_i}(\alpha_1\overline{a}_1 + ... + \alpha_{i-1}\overline{a}_{i-1} + \alpha_{i+1}\overline{a}_{i+1} + ... + \alpha_n\overline{a}_n)$, тобто вектор $\overline{a}_i$ лінійно
+	виражається через інші вектори системи.
+	
+	2) Нехай $\overline{a}_i = \beta_1\overline{a}_1 + ... + \beta{i-1}\overline{a}_{i-1} + \beta{i+1}\overline{a}_{i+1} + ... + \beta_n\overline{a}_n)$ для деякого $i$. Тоді
+	$\beta_1\overline{a}_1 + ... + \beta_{i-1}\overline{a}_{i-1} + (-1)\overline{a}_{i} + \beta_{i+1}\overline{a}_{i+1} + ... + \beta_{n}\overline{a}_{n} = \overline{0}$, тобто отримано нульову
+	лінійну комбінацію, в якій коефіцієнт при векторі i a є ненульовим. 
+\end{proof}
+
+\begin{claim}
+	Якщо один з векторів $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ є нульовим, то система цих векторів
+	є лінійно залежною. 
+\end{claim}
+\begin{proof}
+	Припустимо, що $\overline{a}_1 = \overline{0}$. Тоді очевидно, що
+	$1\overline{a}_1 + 0 \overline{a}_2 + ... + 0 \overline{a}_n = \overline{0}$, тобто за означенням дана система векторів є лінійно
+	залежною $(\alpha_1 = 1 \neq 0)$. 
+\end{proof}
+
+\begin{claim}
+	Якщо серед векторів $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ є два однакових, то система векторів є
+	лінійно залежною.
+\end{claim}
+\begin{proof}
+	Доведення є очевидним.
+\end{proof}
+
+\begin{claim}
+	Якщо серед $n$ векторів існує $k$ лінійно залежних векторів, то і всі $n$
+	векторів є лінійно залежними.
+\end{claim}
+\begin{proof}
+	Розглянемо лінійну комбінацію даних $n$ векторів
+	$\alpha_1\overline{a}_1 + ... + \alpha_{k}\overline{a}_{k} + 0\overline{a}_{k+1} + ... + 0\overline{a}_{n} = \overline{0}$,при умові, що
+	$\alpha_1\overline{a}_1 + ... + \alpha_{k}\overline{a}_{k} = \overline{0}$ і константи $\alpha_1, \alpha_2, ..., \alpha_{n-1}$ не всі рівні нулю. Ця
+	комбінація є нетривіальною, що і доводить потрібний факт.
+\end{proof}
+
+\begin{claim}
+	Якщо вектор $\overline{a}$ лінійно виражається через лінійно незалежні вектори
+	$\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$, то таке представлення єдине. 
+\end{claim}
+\begin{proof}
+	(від супротивного). Припустимо, що вектор $\overline{a}$ лінійно виражається
+	через дані вектори не єдиним чином, тобто
+	$\overline{a} = \alpha_{1}\overline{a}_{1} + \alpha_{2}\overline{a}_{2} + ... + \alpha_{n}\overline{a}_{n}$ і $\overline{a} = \beta_{1}\overline{a}_{1} + \beta_{2}\overline{a}_{2} + ... + \beta_{n}\overline{a}_{n}$.
+	Віднявши другу рівність від першої, маємо:
+	$\overline{0} = (\alpha_1 - \beta_1)\overline{a}_1 + (\alpha_2 - \beta_2)\overline{a}_2 + ... + (\alpha_n - \beta_n)\overline{a}_n$.
+	Оскільки $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ є лінійно незалежними, то $\alpha_1 = \beta_1, \alpha_2 = \beta_2, ..., \alpha_n = \beta_n$, що
+	суперечить припущенню про неєдиність представлення вектора $\overline{a}$.
+\end{proof}
+
+\begin{claim}
+	Довільна підсистема лінійно незалежних векторів $\overline{a}_1$, $\overline{a}_2$, $...$, $\overline{a}_n$ є лінійно
+	незалежною.
+\end{claim}
+\begin{proof}
+	Застосуємо метод від супротивного. Нехай існує підсистема
+	$\overline{a}_1, \overline{a}_2, ..., \overline{a}_n, k<n$, лінійно залежних векторів. Це означає, що
+	$\alpha_1\overline{a}_1 + \alpha_2\overline{a}_2 + ... + \alpha_{k}\overline{a}_{k} = \overline{0}$, причому $|\alpha_1| + |\alpha_2| + ... + |\alpha_k| \neq 0$. Додамо до обох
+	частин рівності нуль-вектор: $0\overline{a}_{k+1} + ... + 0\overline{a}_{n}$. В результаті отримаємо:
+	$\alpha_1\overline{a}_1 + \alpha_2\overline{a}_2 + ... + \alpha_k\overline{a}_k + 0\overline{a}_{k+1} + ... + 0\overline{a}_{n} = \overline{0}$ і $|\alpha_1| + |\alpha_2| + ... + |\alpha_k| \neq 0$.
+	Це означає лінійну залежність векторів $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$, що протирічить припущенню.
+	Отже, підсистема $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$, є лінійно незалежною. 
+\end{proof}
+
+\begin{claim}
+	Якщо після доповнення системи $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ лінійно незалежних
+	векторів вектором $\overline{a}$, отримали лінійно залежну систему, то вектор $\overline{a}$ лінійно
+	виражається через вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$.
+\end{claim}
+\begin{proof}
+	Оскільки вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n, \overline{a}$ є лінійно залежними, то існують
+	такі константи $\alpha_1, \alpha_2, ..., \alpha_n, \alpha_{n+1}$, не всі рівні нулю, що
+	
+	$\alpha_1\overline{a}_1 + \alpha_2\overline{a}_2 + ... + \alpha_n\overline{a}_n + \alpha_{n+1}\overline{a} = \overline{0}$. (*)
+	
+	При цьому саме $\alpha_{n+1} \neq 0$. Доведемо цей факт методом від супротивного. Якщо
+	$\alpha_{n+1} = 0$, то $\alpha_{n+1}\overline{a} = \overline{0}$ і $\alpha_1\overline{a}_1 + \alpha_2\overline{a}_2 + ... + \alpha_n\overline{a}_n = \overline{0}$, причому серед чисел
+	$\alpha_1, \alpha_2, ..., \alpha_n$ існують ненульові. Але в цьому випадку вектори $\overline{a}_1, \overline{a}_2, ..., \overline{a}_n$ є 
+	лінійно залежними, що суперечить умові твердження. Отже, $\alpha_{n+1} \neq 0$, тому з
+	рівності (*) випливає, що $\overline{a} = \left(-\dfrac{\alpha_1}{\alpha_{n+1}}\right)\overline{a}_1 + ... + \left(-\dfrac{\alpha_n}{\alpha_{n+1}}\right)\overline{a}_n$.
+\end{proof}
+
+\section*{Геометричний сенс лінійної залежності}
+
+\begin{claim}
+	Два вектори $\overline{a}$ і $\overline{b}$ є лінійно залежними тоді і тільки тоді, коли $\overline{a} \parallel \overline{b}$.
+\end{claim}
+
+\begin{claim}
+	Три вектори $\overline{a}, \overline{b}, \overline{c}$ є лінійно залежними тоді і тільки тоді, коли $\overline{a}, \overline{b}, \overline{c}$ є компланарними. 
+\end{claim}
+
+\begin{claim}
+	Довільні чотири вектори $\overline{a}, \overline{b}, \overline{c}, \overline{d} \in E^3$ є завжди лінійно залежними.
+\end{claim}
+
+
+
+
+
+

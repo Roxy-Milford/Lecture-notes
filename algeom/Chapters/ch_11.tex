@@ -1,0 +1,2358 @@
+\chapter{Лінійна алгебра}
+
+
+\section{Лінійні простори. Лінійні оператори (продовження)}
+
+\subsection*{Сума та перетин лінійних підпросторів}
+
+Нехай $L$ --- деякий лінійний простір, $L_1$, $L_2$, --- його підпростори.
+
+Озн .Сумою $L_1 + L_2$ лінійних підпросторів $L_1$ і $L_2$ є:
+$L_1 + L_2 = \{ x \in L: x = x_1 + x_2, \forall x_1 \in L_1, \forall x_2 \in L_2\}$.
+
+
+Озн .Перетином $L_1 \cap L_2$ підпросторів $L_1$ і $L_2$ є:
+$L_1 \cap L_2 = \{x \in L: x \in L_1 \wedge x \in L_2 \}$.
+
+
+Твердження. Сума і перетин $L_1$ і $L_2$ є підпросторами $L$.
+
+
+Доведення. Нехай $x,y \in L_1 + L_2$; $x = x_1 + x_2$, $x_1 \in L_1$, $x_2 \in L_2$,
+
+$y = y_1 + y_2$, $y_1 \in L_1$, $y_2 \in L_2$.
+
+Тоді $\alpha x + \beta y = \alpha(x_1 + x_2) + \beta(y_1 + y_2) = (\alpha x_1 + \beta y_1) + (\alpha x_2 + \beta y_2):$
+
+$\alpha x_1 + \beta y_1 \in L_1$, $\alpha x_2 + \beta y_2 \in L_2 \Rightarrow \alpha x + \beta y \in L_1 + L_2.$
+
+І нехай $x,y \in L_1 \cap L_2$.
+
+Тоді $\alpha x + \beta y \in L_1$, $\alpha x + \beta y \in L_2 \Rightarrow \alpha x + \beta y \in L_1 \cap L_2$.
+
+
+Приклади.
+а)
+Рис. 1
+
+$$L_1 = E^1, L_2 = E^1,$$
+
+$$L_1 \cap L_2 = \{\overline{0}\},$$
+
+$$L_1 + L_2 = E^2.$$
+
+
+б)
+
+$$L_1 = E^2, L_2 = E^1,$$
+
+$$L_1 + L_2 = E^3,$$
+
+$$L_1 \cap L_2 = \{\overline{0}\}.$$
+
+
+в)
+
+$$L_1 = E^2, L_2 = E^2,$$
+
+$$L_1 + L_2 = E^3,$$
+
+$$L_1 \cap L_2 = E^1.$$
+
+
+
+Теорема. $\dim(L_1 + L_2) = \dim L_1 + \dim L_2 - \dim(L_1 \cap L_2)$.
+
+Доведення. Нехай $\dim(L_1 \cap L_2) = k$ і вектори $\{g_1, g_2, ..., g_k\}$ --- базис
+$L_1 \cap L_2$. Якщо $\dim L_1 = m$, можемо побудувати такий базис
+$L_1: \{f_1, ..., f_{m-k}, g_1, ..., g_k\}$.
+
+
+Аналогічно: $\dim L_2 = p$, $\{g_1, ..., g_k, t_1, ..., t_{p-k}\}$ --- базис $L_2$.
+
+Розглянемо систему векторів:
+
+$\{f_1, ..., f_{m-k}, g_1, ..., g_k, t_1, ..., t_{p-k}\} (*)$
+
+і доведемо, що вона є базисом $L_1 + L_2$.
+
+$$\forall x \in L_1 + L_2, x = x_1 + x_2
+= \left( \sum\limits_{i=1}^{m-k} \alpha_i f_i
+		+ \sum\limits_{i=1}^{k} \beta_i g_i \right)
++ \left( \sum\limits_{i=1}^{k} \gamma_i g_i
+		+ \sum\limits_{i=1}^{p-k} \delta_i t_i \right) = $$
+		
+$$= \sum\limits_{i=1}^{m-k} \alpha_i f_i
++ \sum\limits_{i=1}^{k} (\beta_i \gamma_i)g_i
++ \sum\limits_{i=1}^{p-k} \delta_i t_i.$$
+
+
+Таким чином, система (*) є повною в $L_1 + L_2$. Припустимо, що (*) ---
+лінійно залежна, тобто $\exists \alpha_i, \beta_i, \gamma_i$ не всі водночас нульові, такі, що
+
+$$\alpha_1 f_1 + ... + \alpha_{m-k} f_{m-k} + \beta_i g_i + ... + \beta_k g_k + \gamma_i t_i + ... + \gamma_{p-k} t_{p-k} = 0. (1)$$
+
+Позначимо: $y = \gamma_i t_i + ... + \gamma_{p-k} t_{p-k}$. (2)
+
+Зрозуміло, що $y \in L_2$. Але із (1) $\Rightarrow y \in L_1$.
+
+Тобто, $y \in L_1, l_2$. Тоді $y = v_1 g_1 + ... + v_k g_k$. (3)
+
+Із (2) та (3) $\Rightarrow v_1 g_1 + ... + v_k g_k + (-\gamma_1) t_1 + ... + (-\gamma_{p-k}) t_{p-k} = 0 \Rightarrow$
+
+$\Rightarrow \forall v_i = 0 \forall \gamma_i = 0$
+через лінійну незалежність $\{g_1, ..., g_k, t_1, ..., t_{p-k}\}$.
+
+Маємо із (1) $\alpha_1 f_1 + ... + \alpha_{m-k} f_{m-k} = 0 \Rightarrow \forall \alpha_i = 0$ з
+таких же міркувань.
+
+Таким чином, наше припущення, що у (1) деякі коефіцієнти $\neq 0$ невірне,
+що й доводить лінійну незалежність системи (*).
+
+Отримали, що система (*) повна у $L_1 + L_2$ і лінійно незалежна $\Rightarrow$ вона є
+базисом у $L_1 + L_2$.
+
+
+Кількість векторів у системі (*): $(m - k) + k + (p - k) = m + p - k$,
+що і доводить теорему. 
+
+\subsection*{Пряма сума лінійних підпросторів}
+
+Нехай $L$ --- лінійний простір, $L_1 \subset L$, $L_2 \subset L$.
+
+Озн. Сума $L_1 + L_2$ називається прямою (позначається $L+1 \dotplus L_2$), якщо
+$\forall x \in L_1 + L_2$, $x = x_1 + x_2$, $x_1 \in L_1$, $x_2 \in L_2$ і цей розклад єдиний.
+
+Приклади 1) і 2) є прикладами прямої суми, а 3) --- ні.
+
+Теорема 2. Лінійний простір $L$ розкладається у пряму суму своїх
+підпросторів $L = L_1 \dotplus L_2$ тоді і тільки тоді, коли об’єднання базисів
+підпросторів є базисом всього $L$.
+
+Доведення. Нехай $L = L_1 \dotplus L_2$, $\{f_1, ..., f_m\}$ --- базис $L_1$, $$\{g_1, ..., g_k\}$$ --- базис
+$L_2$.
+
+
+$$\forall x \in L_1 \dotplus L_2, x = x_1 + x_2, x_1 \in L_1, x_2 \in L_2$$
+
+$$x_1 = \alpha_1 f_1 + ... + \alpha_m f_m, x_2 = \beta_1 g_1 + ... + \beta_k g_k \Rightarrow$$
+
+$$x = \alpha_1 f_1 + ... + \alpha_m f_m + \beta_1 g_1 + ... + \beta_k g_k,$$
+
+тобто система векторів
+
+$\{f_1, ..., f_m, g_1, ..., g_k\} *)$
+
+є повною в $L_1 + L_2$.
+
+Доведемо, що система *) --- лінійно незалежна. Припустимо, що
+$\exists \alpha_i \neq 0$ і $\exists \beta_i \neq 0$ є такі, що
+
+$$\alpha_1 f_1 + ... + \alpha_m f_m + \beta_1 g_1 + .. + \beta_k g_k = 0. (1)$$
+
+Вектор 0, який стоїть праворуч, можна представити у вигляді $0 = 0 + 0$ і цей
+розклад єдиний.
+
+Із (1) випливає: $\alpha_1 f_1 + ... + \alpha_m f_m = 0$, $\beta_1 g_1 + .. + \beta_k g_k = 0$,
+а із лінійної незалежності базисів $L_1$ і $L_2$: $\forall \alpha_i = 0$ і $\forall \beta_i = 0$,
+що доводить першу частину теореми.
+
+Тепер припустимо, що система *) --- базис $L_1 + L_2$.
+
+$$\forall x \in L_1 + L_2: x = \alpha_1 f_1 + ... + \alpha_m f_m + \beta_1 g_1 + ... + \beta_k g_k$$
+
+і цей розклад єдиний. Тобто $x = x_1 + x_2$, де $x_1 = \alpha_1 f_1 + ... + \alpha_m f_m \in L_1$,
+$x_2 = \beta_1 g_1 + ... + \beta_k g_k \in L_2$. Це і доводить той факт, що сума $L_1 \dotplus L_2$ --- пряма.
+Теорему доведено. 
+
+\section{Перехід до іншого базису}
+
+\subsection*{Перетворення координат вектора при зміні базису}
+
+Нехай $L$ --- лінійний простір, $\dim L = n$, $\{e_1, ..., e_m\}$ --- базис цього простору,
+який ми умовно будемо називати «старим».
+
+Якщо $x \in L$, то: $x = x_1 e_1 + x_2 e_2 + ... + x_n e_n. (1)$
+
+Таким чином, кожному елементу $x \in L$ можна поставити у взаємно
+однозначну відповідність стовпчик координат цього вектора за «старим»
+базисом:
+
+$$L \ni x \leftrightarrow \overline{x} = \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	\vdots \\
+	x_n \\
+\end{pmatrix} \in R^n.$$
+
+Якщо ж взяти в тому ж просторі якийсь інший («новий») базис
+$\{f_1, ..., f_n\}$, то той же вектор $x$ можна розкласти за ним і отримати стовпчик
+«нових» координат: $x = \tilde{x}_1 f_1 + \tilde{x}_2 f_2 + ... + \tilde{x}_n f_n = \sum\limits_{j=1}^N \tilde{x}_j f_j. (2)$
+
+Тобто, тому ж самому елементу x відповідатиме інший стовпчик:
+
+$$L \ni x \leftrightarrow \tilde{\overline{x}} = \begin{pmatrix}
+	\tilde{x}_1 \\
+	\vdots \\
+	\tilde{x}_n \\
+\end{pmatrix} \in R^n.$$
+
+
+
+Нам треба знайти зв’язок між стовпчиками $\overline{x}$ та $\tilde{\overline{x}}$.
+
+Побудуємо так звану матрицю переходу $U$. Для цього:
+
+а) кожний вектор «нового» базису по черзі розкладемо за «старим»: 
+
+$$\begin{matrix}
+	f_1 = a_{11} e_1 + a_{21} e_2 + ... + a_{n1} e_n = \sum\limits_{i=1}^n a_{i1} e_i, \\
+	\vdots \\
+	f_j = a_{1j} e_1 + a_{2j} e_2 + ... + a_{nj} e_n = \sum\limits_{i=1}^n a_{ij} e_i, \text{ і т.д. (3)} \\
+\end{matrix}$$
+
+
+б) коефіцієнти розкладу запишемо стовпчиками.
+
+$$ U = \begin{pmatrix}
+	a_{11} & a_{12} & ...    & a_{1n} \\
+	\vdots & \vdots & \ddots & \vdots \\
+	a_{n1} & a_{n2} & ...    & a_{nn} \\
+\end{pmatrix}. $$
+
+З виразів (2) та (3) маємо,
+
+$$x = \sum\limits_{j=1}^n \tilde{x}_j f_j
+= \sum\limits_{j=1}^n \tilde{x}_j \sum\limits_{i=1}^n a_{ij} e_i
+= \sum\limits_{j=1}^n \sum\limits_{i=1}^n a_{ij} \tilde{x}_j e_i
+= \sum\limits_{j=1}^n \left( \sum\limits_{i=1}^n a_{ij} \tilde{x}_j \right) e_i.$$
+
+Порівнюючи отриманий результат із виразом (1), маємо: $x_i = \sum\limits_{j=1}^n a_{ij} \tilde{x}_j$.
+
+Це є покоординатний запис співвідношення $\overline{x} = U \tilde{\overline{x}}$.
+
+Тоді, $\tilde{\overline{x}} = U^{-1} \overline{x}$.
+
+Зауваження. $\det U \neq 0$, оскільки її стовпчики --- координати $n$ лінійно
+незалежних базисних векторів. А це означає, що $U^{-1}$ завжди існує.
+
+Приклад. Знайти координати розкладу вектора $x = (6, 9,14)$ за базисом
+$f_1 = (1,1,1)$, $f_2 = (1,1, 2)$, $f_3 = (1, 2, 3)$.
+
+Розв’язання. Координати векторів $x$, $f_1$, $f_2$, $f_3$ задані в канонічному
+базисі $e_1 = (1, 0, 0)$, $e_2 = (0,1, 0)$, $e_3 = (0, 0,1)$. Нам зручно саме його вважати
+«старим», а $f_1$, $f_2$, $f_3$ --- «новим». Тоді матриця переходу
+
+$$U = \begin{pmatrix}
+	1 & 1 & 1 \\
+	1 & 1 & 2 \\
+	1 & 2 & 3 \\
+\end{pmatrix}.$$
+
+$$\det U = \left| \begin{matrix}
+	1 & 1 & 1 \\
+	1 & 1 & 2 \\
+	1 & 2 & 3 \\
+\end{matrix} \right| = \left| \begin{matrix}
+	1 & 1 & 1 \\
+	0 & 0 & 1 \\
+	0 & 1 & 2 \\
+\end{matrix} \right| = -1, U^T = U,$$
+
+$$U^{-1} = -\begin{pmatrix}
+	-1 & -1 &  1 \\
+	-1 &  2 & -1 \\
+	 1 & -1 &  0 \\
+\end{pmatrix} = \begin{pmatrix}
+	 1 &  1 & -1 \\
+	 1 & -2 &  1 \\
+	-1 &  1 &  0 \\
+\end{pmatrix}.$$
+
+$$\tilde{x} = U^{-1} x = \begin{pmatrix}
+	 1 &  1 & -1 \\
+	 1 & -2 &  1 \\
+	-1 &  1 &  0 \\
+\end{pmatrix} \begin{pmatrix}
+	 6 \\
+	 9 \\
+	14 \\
+\end{pmatrix} = \begin{pmatrix}
+	1 \\
+	2 \\
+	3 \\
+\end{pmatrix}.$$
+
+Можна переконатись, що дійсно $x = 1 f_1 + 2 f_2 + 3 f_3$.
+
+
+\subsection*{Матриця лінійного оператора при зміні базису}
+
+Нехай $A$ --- деякий лінійний оператор, який діє із лінійного простору $L$ у
+простір $M$. $A: L \rightarrow M$.
+
+І нехай $\dim L = n$, $\{e_1, ..., e_n\}$ --- «старий» базис $L$, $dim M = m$,
+$\{\varepsilon_1, ..., \varepsilon_m\}$ --- «старий» базис $M$.
+
+У цих базисах можемо побудувати матрицю оператора $A_{e \varepsilon}$.
+
+Якщо у просторі $L$ перейти до базису $\{f_1 ,..., f_n\}$, а у просторі $M$ до
+базису $\{\varphi_1 ,..., \varphi_n\}$, то у цих «нових» базисах матриця того ж оператора
+зміниться --- $\tilde{A}_{f \varphi}$. Треба знайти зв’язок між цими матрицями.
+
+Побудуємо дві матриці переходу: $U(n \times n)$ --- у просторі $L$, $W (m \times m)$ --- у
+просторі $M$. Тоді операторному співвідношенню $A x = y$, $x \in L$, $y \in M$
+відповідають матричні:
+
+$$A_{e \varepsilon} \overline{x}_{e} = \overline{y}_{\varepsilon}, (1)$$
+
+$$A_{f \varphi} \tilde{\overline{x}}_{f} = \tilde{\overline{y}}_{\varphi}, (2)$$
+
+Але, $\overline{x}_{e} = U \tilde{\overline{x}}_f$,
+$\overline{y}_{\varepsilon} = W \tilde{\overline{y}}_{\varphi}$. Підставляємо у (1):
+
+$$A_{e \varepsilon} U \tilde{\overline{x}}_f = W \tilde{\overline{y}}_{\varphi} 
+\Rightarrow W^{-1} A_{e \varepsilon} U \tilde{\overline{x}}_f = \tilde{\overline{y}}_{\varphi}.$$
+
+Порівнюючи із (2), маємо: $\tilde{A}_{f \varphi} = W^{-1} A_{e \varepsilon} U$,
+і навпаки. $A_{e \varepsilon} = W \tilde{A}_{f \varphi} U^{-1}$.
+
+Для нас буде важливим такий окремий випадок: $A: L \rightarrow L$.
+
+І у першому, і у другому «екземплярі» простору $L$ базис $\{e_1 ,..., e_n\}$ ---
+«новий», а $\{f_1 ,..., f_n\}$ --- «старий», матриця переходу --- $U$.
+Тоді $A = U \tilde{A} U^{-1}$, $\tilde{A} = U^{-1} A U$.
+
+Приклад. Оператор $A$ переводить вектори $a_1 = \begin{pmatrix} 1 \\ -1 \\ \end{pmatrix}$ в 
+$b_1 = \begin{pmatrix} 2 \\ 0 \\ \end{pmatrix}$, $a_2 = \begin{pmatrix} -1 \\ 2 \\ \end{pmatrix}$
+в $b_2 = \begin{pmatrix} -3 \\ 1 \\ \end{pmatrix}$. Знайти матрицю оператора $A$:
+
+а) в базисі $\{a_1, a_2\}$.
+
+б) в канонічному базисі.
+
+Розв’язання.
+
+а) Щоб побудувати матрицю оператора $A$ в базисі $\{a_1, a_2\}$, треба $b_1 = A a_1$ і
+$b_2 = A a_2$ розкласти за тим же базисом, коефіцієнти розкладу записати
+стовпчиками. Тобто треба знати $b_1$ і $b_2$ в «новому» базисі $\{a_1, a_2\}$.
+
+$$U = \begin{pmatrix}
+	1 & -1 \\
+	-1 & 2 \\
+\end{pmatrix}, \det U = 1, U^{-1} = \begin{pmatrix}
+	2 & 1 \\
+	1 & 2 \\
+\end{pmatrix}.$$
+
+Тоді 
+
+$$\tilde{b}_1 = U^{-1} b_1 = \begin{pmatrix}
+	2 & 1 \\
+	1 & 2 \\
+\end{pmatrix} \begin{pmatrix}
+	2 \\
+	0 \\
+\end{pmatrix} = \begin{pmatrix}
+	4 \\
+	2 \\
+\end{pmatrix}, \tilde{b}_2 = U^{-1} b_2 = \begin{pmatrix}
+	2 & 1 \\
+	1 & 1 \\
+\end{pmatrix} \begin{pmatrix}
+	-3 \\
+	1 \\
+\end{pmatrix} = \begin{pmatrix}
+	-5 \\
+	-2 \\
+\end{pmatrix}.$$
+
+$$\tilde{A}_{a_1, a_2} = \begin{pmatrix}
+	4 & -5 \\
+	2 & -2 \\
+\end{pmatrix}.$$
+
+б) В канонічному базисі $A_k = U \tilde{A}_{a_1, a_2} U^{-1} = \begin{pmatrix}
+	1 & 1 \\
+	-1 & 2 \\
+\end{pmatrix} \begin{pmatrix}
+	4 & -5 \\
+	2 & -2 \\
+\end{pmatrix} \begin{pmatrix}
+	2 & 1 \\
+	1 & 1 \\
+\end{pmatrix} = \begin{pmatrix}
+	1 & -1 \\
+	1 & 1 \\
+\end{pmatrix}.$
+
+\section{Структура лінійного оператора}
+
+\subsection*{Власні числа, власні вектори лінійного оператора}
+
+Нехай $A: L \rightarrow L$ --- лінійний оператор, який діє в просторі $L$.
+
+Озн. Вектор $f neq 0$ називається власним вектором оператора $A$ з
+власним числом $\lambda$, якщо $A f = \lambda f$.
+
+Твердження 1. Якщо $f$ --- власний вектор $A$ з власним числом $\lambda$, то $\alpha f$
+($\alpha \neq 0$) --- також власний вектор $A$ з тим же власним числом.
+
+$$A(\alpha f) = \alpha A f = \alpha \lambda f = \lambda(\alpha f).$$
+
+Якщо до множини векторів $\alpha f$ ($\forall \alpha \neq 0$) додати нульовий вектор,
+отримаємо власний лінійний підпростір розмірності 1.
+
+Твердження 2. Якщо $f \neq 0$, $g \neq 0$ і $A f = \lambda f$, $A g = \lambda g$, то $\alpha f + \beta g$ ---
+також власний вектор $A$ з числом $\lambda$.
+
+$$A(\alpha f + \beta g) = A(\alpha f) + A(\beta g) = \alpha A f + \beta A g
+= \alpha \lambda f + \beta \lambda g = \lambda(\alpha f + \beta g).$$
+
+І знову, якщо до «площини» векторів $f$ і $g$ додамо нульовий вектор,
+отримаємо власний підпростір $A$ розмірністю $2$.
+
+Ці твердження можна узагальнювати і далі.
+
+Теорема. Якщо $f_n$, ..., $f_n$ --- власні вектори оператора $A$, що відповідають
+різним власним числам $\lambda_1$, ..., $\lambda_n$, то вони --- лінійно незалежні.
+
+$A f_1 = \lambda_1 f_1$, ..., $A f_n = \lambda_n f_n$, $\lambda_i \neq \lambda_j$ при $i \neq j$.
+
+Доведення. Проведемо доведення за індукцією.
+
+$f_1 \neq 0$ --- лінійно незалежний.
+
+Припустимо, що $f_1$, ..., $f_{n-1}$ --- лінійно незалежні. Лінійну незалежність
+всіх $n$ векторів доведемо від супротивного.
+
+Тобто існують числа $\alpha_1$, ..., $\alpha_n$, $\sum\limits_{i=1}^n |\alpha_i| \neq 0$, такі що
+
+$$\alpha_1 f_1 + ... + \alpha_{n-1} f_{n-1} + \alpha_n f_n = 0. (1)$$
+
+
+Тоді $A\left( \sum\limits_{i=1}^n \alpha_i f_i \right) = \alpha_1 A f_1 + ...  + \alpha_{n-1} A f_{n-1} + \alpha_n A f_n =$
+
+$\alpha_1 \lambda_1 f_1 + ... + \alpha_{n-1} \lambda_{n-1} f_{n-1} + \alpha_n \lambda_n f_n = 0. (2)$
+
+
+Помножимо вираз (1) на $\lambda_n$ і віднімемо від (2). Отримаємо:
+
+$$\alpha_1(\lambda_1 - \lambda_n)f_1 + \alpha_2(\lambda_2 - \lambda_n)f_2 + ... + \alpha_{n-1}(\lambda_{n-1} - \lambda_n)f_{n-1} = 0.$$
+
+
+Для $i = 1,2,...,n -1$, $\lambda_i - \lambda_n \neq 0$, тому через лінійну незалежність
+$f_1$, ..., $f_n$ випливає, що $\alpha_1 = ... = \alpha_{n-1} = 0$.
+
+Але з (1) $\Rightarrow \alpha_n = 0$, що і доводить теорему.
+
+Якщо $\dim L = n$, та існують $n$ лінійно незалежних власних векторів
+($A f_i = \lambda_i f_i$, $i = 1, ..., n$), то в такому і тільки в такому базисі матриця оператора
+$A$ має діагональний вигляд
+
+$$A = \begin{pmatrix}
+	\lambda_1 & 0 & 0 & ... & 0 \\
+	0 & \lambda_2 & 0 & ... & 0 \\
+	0 & 0 & \lambda_3 & ... & 0 \\
+	... & ... & ... & ... & 0 \\
+	0 & 0 & 0 & ... & \lambda_n \\
+\end{pmatrix} $$
+
+Такі оператори називають операторами простої структури.
+
+\subsection*{Пошук власних чисел, власних векторів лінійного оператора (матриці)}
+
+
+Нехай $x \neq 0$ --- власний вектор оператора $A$ з числом $\lambda: A x = \lambda x$, чи, що
+одне і те ж:
+
+$$ (A - \lambda I) x = 0. (1)$$
+
+Тут $I$ --- тотожний оператор: $Ix = x$. Якщо в просторі $L$ зафіксовано базис
+$\{l_1, l_2, ..., l_n\}$, матриця оператора $A$ в ньому
+
+$$A = \begin{pmatrix}
+	a_{11} & ...    & a_{1n} \\
+	\vdots & \ddots & \vdots \\
+	a_{n1} & ...    & a_{nn} \\
+\end{pmatrix}, \text{ і } \overline{x} = \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	\vdots \\
+	x-n \\
+\end{pmatrix}.$$
+
+Тоді співвідношення (1) можна переписати у матричному вигляді:
+
+$$(A - \lambda I) \overline{x} = 0. (2)$$
+
+де $I$ --- одинична матриця $n$-го порядку.
+
+Вираз (2) перепишемо:
+
+$$\begin{pmatrix}
+	a_{11} - \lambda & a_{12} & ... & a_{1n} \\
+	a_{21} & a_{22} - \lambda & ... & a_{1n} \\
+	\vdots & \vdots & ... & \vdots \\
+	a_{n1} & a_{n2} & ... & a_{nn} - \lambda \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	\vdots \\
+	x_n \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	\vdots \\
+	0 \\
+\end{pmatrix}. (3)$$
+
+Отримали однорідну систему лінійних рівнянь, яка заздалегідь має
+ненульовий розв’язок. А це може бути тільки тоді, коли ранг матриці цієї
+системи менше за $n$:
+
+$$rang(A - \lambda I) < n,$$
+
+тобто $\det(A - \lambda I) = 0$.
+
+Озн. Многочлен $\det(A - \lambda I)$ степеня $n$ називається характеристичним
+многочленом оператора (матриці), а $\det(A - \lambda I) = 0$ --- характеристичним
+рівнянням. Всі розв’язки цього многочлена з урахуванням їх кратності ---
+власні числа оператора (спектр оператора).
+
+Розв’язавши систему (3) при усіх знайдених значеннях $\lambda$, отримаємо
+власні вектори оператора. На перший погляд може здатися, що знайдені
+власні числа і вектори залежать від матриці лінійного оператора, яка в свою
+чергу залежить від вибору базису.
+
+Відповідь на це питання дає така теорема.
+
+Теорема. Характеристичний многочлен лінійного оператора є
+інваріантним відносно вибору базису. 
+
+Доведення. Нехай $\tilde{A}$ --- матриця лінійного оператора у «новому» базисі,
+а U --- матриця переходу. Тоді, враховуючи, що матриця $\lambda I$ комутує з
+будь-якою матрицею, маємо:
+
+$$\det(A - \lambda I) = |A - \lambda I|
+= |U^{-1} A U - U^{-1} \lambda I U|
+= |U^{-1} (A - \lambda I) U|
+= |U^{-1}| |A - \lambda I| |U|
+= |U^{-1}| |U| |A - \lambda I|
+= |I| |A - \lambda I|
+= |A - \lambda I|,$$
+
+що і треба було довести.
+
+
+Таким чином, $A$ і $\tilde{A}$ мають один і той же характеристичний многочлен
+і спектри їх однакові.
+
+\section{Жорданова нормальна форма матриці}
+
+Озн. Клітинкою Жордана $n$-го порядку називається квадратна матриця
+такого вигляду:
+
+$$\Lambda = \begin{pmatrix}
+	\lambda & 1 & 0 & ... & 0 & 0 \\
+	0 & \lambda & 1 & ... & 0 & 0 \\
+	\vdots & \vdots & 1 & \ddots & \vdots & \vdots \\
+	0 & 0 & 0 & ...& \lambda & 1 \\
+	0 & 0 & 0 & ...& 0 & \lambda \\
+\end{pmatrix}. $$
+
+Припустимо, що це є матриця деякого лінійного оператора $A$ в базисі
+$\{f, e_1, e_2, ..., e_{n-1}\}$. З’ясуємо, як же між собою співвідносяться базисні вектори.
+
+За правилом побудови матриці оператора маємо:
+
+$$A f = \lambda f + 0 e_1 + ...  + 0 e_{n-1} = \lambda f, \text{ або } (A - \lambda I)f = 0.$$
+
+Тобто $f$ --- власний вектор оператора $A$ з власним числом $\lambda$.
+
+$$A e_1 = 1 f + \lambda e_1 + 0 e_2 + ...  + 0 e_{n-1}, (A - \lambda I)e_1 = f.$$
+
+Вектор $e_1$ називається приєднаним до $f$.
+
+$$A e_2 = 0 f + 1 e_1 + \lambda e_2 + ...  + 0 e_{n-1}, (A - \lambda I)e_2 = e_1.$$
+
+
+$e_2$ --- приєднаний до $e_1$, і так далі. Тобто базис складається з одного власного
+вектора та ланцюжка приєднаних один до одного векторів. 
+
+Якщо $\Lambda$ --- клітинно-діагональна матриця з клітинками Жордана по
+головній діагоналі
+
+$$\Lambda = \begin{pmatrix}
+	\Lambda_1 & ...    & 0         \\
+	\vdots    & \ddots & \vdots    \\
+	0         & ...    & \Lambda_s \\
+\end{pmatrix} \text{, де } \Lambda_i = \begin{pmatrix}
+	\lambda_i & 1         & 0      & ...    & 0      & 0         \\
+	0         & \lambda_i & 1      & ...    & 0      & 0         \\
+	\vdots    & \vdots    & \vdots & \ddots & \vdots & \vdots    \\
+	0         & 0         & 0      & ...    & 0      & \lambda_i \\
+\end{pmatrix}, i = 1, ..., s, $$
+
+то базис, в якому вона має такий вигляд (жорданів базис), складається з
+власних векторів $f_1$, ..., $f_s$ з власними числами $\lambda_1$, ..., $\lambda_s$ і ланцюжками
+приєднаних:
+$\{ f_1, e_1^1, e_2^1, ..., , e_{k_1}^1;
+	f_2, e_1^2, e_2^2, ..., , e_{k_2}^2;
+	...;
+	f_s, e_1^s, e_2^s, ..., , e_{k_s}^s \}$
+
+Розберемо 4 приклади, на яких будуть продемонстровані методи та
+прийоми побудови жорданової форми матриці та жорданового базису.
+
+Приклад 1.
+
+$$A = \begin{pmatrix}
+	 3 & -1 &  1 \\
+	-2 &  4 & -2 \\
+	-2 &  2 &  0 \\
+\end{pmatrix} $$
+
+Знаходимо власні числа:
+
+$$\det(A - \lambda I) = \left| \begin{matrix}
+	3 - \lambda & -1          & 1 \\
+	-2          & 4 - \lambda & -2 \\
+	-2          & 2           & -\lambda\\
+\end{matrix} \right| = \left| \begin{matrix}
+	2 - \lambda & 0           & 1 \\
+	2 - \lambda & 2 - \lambda & -2 \\
+	0           & 2 - \lambda & -\lambda\\
+\end{matrix} \right| = (2 - \lambda)^2 \left| \begin{matrix}
+	1 & 0 & 1 \\
+	1 & 1 & -2 \\
+	0 & 1 & -\lambda\\
+\end{matrix} \right|$$
+
+$$= (2 - \lambda)^2 \left| \begin{matrix}
+	1 & 0 & 0 \\
+	1 & 1 & -3 \\
+	0 & 1 & -\lambda\\
+\end{matrix} \right|
+= (2 - \lambda)^2 (3 - \lambda) = 0.$$
+
+$$\lambda_{1,2} = 2, \lambda_{3} = 3.$$
+
+Зауважимо, що треба завжди намагатися запропонувати такі дії над
+рядками і стовпчиками визначника, які б дозволили відокремити лінійні
+множники характеристичного многочлена.
+
+Знаходимо власні вектори: 
+
+$\lambda = 2,$
+
+$$\begin{pmatrix}
+	 1 & -1 &  1 \\
+	-2 &  2 & -2 \\
+	-2 &  2 & -2 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix} $$
+
+$$\rang(A - 2 I) = 1 \Rightarrow \dim \Ker (A - 2 I) = 3 - 1 = 2 \Rightarrow \text{ 2 власні вектори}$$
+
+$$\Rightarrow \text{ 2 клітинки Жордана}$$
+
+$$x_1 = x_2 - x_3,$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_2 - x_3 \\
+	x_2 + 0 \\
+	0 + x_3 \\
+\end{pmatrix} = x_2 \begin{pmatrix}
+	1 \\
+	1 \\
+	0 \\
+\end{pmatrix} + x_3 \begin{pmatrix}
+	-1 \\
+	0 \\
+	1 \\
+\end{pmatrix}.$$
+
+Таким чином, для $\lambda = 2$ існує 2 лінійно незалежні власні вектори:
+
+$$f = \begin{pmatrix}
+	1 \\
+	1 \\
+	0 \\
+\end{pmatrix}, g = \begin{pmatrix}
+	-1 \\
+	0 \\
+	1 \\
+\end{pmatrix}.$$
+
+Аналогічно для $\lambda = 3$:
+
+$$\begin{pmatrix}
+	 0 & -1 &  1 \\
+	-2 &  1 & -2 \\
+	-2 &  2 & -3 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix} $$
+
+$$\left\{ \begin{matrix}
+	-x_2 + x_3 = 0 \\
+	x_2 - 2 x_3 = 2 x_1 \\
+\end{matrix} \right.; -x_3 = 2x_1; x_3 = -2x_1; x_2 = x_3 = -2x_1;$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_1 \\
+	-2 x_1 \\
+	-2 x_1 \\
+\end{pmatrix} = -x_1 \begin{pmatrix}
+	-1 \\
+	 2 \\
+	 2 \\
+\end{pmatrix}, h = \begin{pmatrix}
+	-1 \\
+	 2 \\
+	 2 \\
+\end{pmatrix} \text{ --- власний вектор для } \lambda = 3.$$
+
+Отже, ми знайшли 3 лінійно незалежних власних вектори, які і складають
+жорданів базис --- $\{f, g, h\}$. f g h Матриця в такому базисі має вигляд:
+
+$$\tilde{A} = \begin{pmatrix}
+	2 & 0 & 0 \\
+	0 & 2 & 0 \\
+	0 & 0 & 3 \\
+\end{pmatrix}. $$
+
+Якщо $U = \begin{pmatrix}
+	1 & -1 & -1 \\
+	1 &  0 &  2 \\
+	0 &  1 &  2 \\
+\end{pmatrix}$ --- матриця переходу, то перевірка $\tilde{A} = U^{-1} A U$
+підтверджує наш результат.
+
+Приклад 2.
+
+$$A = \begin{pmatrix}
+	-4 &  4 &  2 \\
+	-1 &  1 &  1 \\
+	-5 &  4 &  3 \\
+\end{pmatrix}. $$
+
+$$\det(A - \lambda I) = \left| \begin{matrix}
+	-4 - \lambda & 4           & 2 \\
+	-1           & 1 - \lambda & 1 \\
+	-5           & 4           & 3-\lambda\\
+\end{matrix} \right| = \left| \begin{matrix}
+	-2 - \lambda & 4           & 2 \\
+	0            & 1 - \lambda & 1 \\
+	-2 - \lambda & 4           & 3-\lambda\\
+\end{matrix} \right| = -(2 + \lambda) \left| \begin{matrix}
+	1 & 4           & 2 \\
+	0 & 1 - \lambda & 1 \\
+	1 & 4           & 3-\lambda\\
+\end{matrix} \right| $$
+
+$$= -(2 + \lambda) \left| \begin{matrix}
+	1 & 4           & 2 \\
+	0 & 1 - \lambda & 1 \\
+	0 & 0           & 1-\lambda\\
+\end{matrix} \right| = -(2 + \lambda)-(1 - \lambda)^2 = 0.$$
+
+$$\lambda_{1,2} = 1, \lambda_{3} = -2.$$
+
+Знайдемо власні вектори:
+
+$$\lambda = 1,$$
+
+$$\begin{matrix}
+	-5 & 4 & 2 \\
+	-1 & 0 & 1 \\
+	-5 & 4 & 2 \\
+\end{matrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix};$$
+
+$$\rang(A-I) = 2 \Rightarrow \dim \Ker(A-I) = 3-2 = 1 \Rightarrow 1 \text{ власний вектор } \Rightarrow$$
+
+$$\Rightarrow 1 \text{ клітинка Жордана.}$$
+
+$$\left\{ \begin{matrix}
+	4x_2 + 2 x_3 = 5x_1 \\
+	x_3 = x_1 \\
+\end{matrix} \right.; 4x_2 = 5x_1 - 2x_3 = 5x_1 -2 x_1 = 3x_1 \Rightarrow x_2 = \dfrac{3x_1}{4};$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_1 \\
+	\dfrac{3x_1}{4} \\
+	x_1 \\
+\end{pmatrix} = \dfrac{x_1}{4} \begin{pmatrix}
+	4 \\
+	3 \\
+	4 \\
+\end{pmatrix}, f = \begin{pmatrix}
+	4 \\
+	3 \\
+	4 \\
+\end{pmatrix} \text{ --- єдиний власний вектор для } \lambda = 1.$$
+
+
+Тому вже зараз можемо вказати жорданову форму матриці: 
+
+$$\tilde{A} = \begin{pmatrix}
+	1 & 1 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & -2 \\
+\end{pmatrix}.$$
+
+Треба мати на увазі, що власному числу кратності 1 (в даному випадку $-2$),
+завжди відповідає клітинка Жордана 1-го порядку.
+Знайдемо вектор, приєднаний до $f$:
+
+$$\begin{pmatrix}
+	-5 & 4 & 2 \\
+	-1 & 0 & 1 \\
+	-5 & 4 & 2 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix}\begin{pmatrix}
+	4 \\
+	3 \\
+	4 \\
+\end{pmatrix} $$
+
+Система повинна бути сумісною.
+
+Знайдемо її частковий розв’зок при $x_1 = 0$.
+
+$$\left\{ \begin{pmatrix}
+	2x_2 + x_3 = 2 \\
+	x_3 = 3 \\
+\end{pmatrix} \right. 2 x_2 = 2 - x_3 = 2 - 3 = -1 \Rightarrow x_2 = -\dfrac{1}{2};$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	-\dfrac{1}{2} \\
+	3 \\
+\end{pmatrix}; e = \begin{pmatrix}
+	0 \\
+	-\dfrac{1}{2} \\
+	3 \\
+\end{pmatrix}.$$
+
+Шукаємо власний вектор при $\lambda = -2$.
+
+$$\begin{pmatrix}
+	-2 & 4 & 2 \\
+	-1 & 3 & 1 \\
+	-5 & 4 & -5 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix};$$
+
+$$\left\{ \begin{pmatrix}
+	-x_1 + 2x_2 = -x_3 \\
+	-x_1 + 3x_2 = -x_3 \\
+\end{pmatrix} \right. x_2 = 0; x_1 = x_3;$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_3 \\
+	0 \\
+	x_3 \\
+\end{pmatrix} = x_3 \begin{pmatrix}
+	1 \\
+	0 \\
+	1 \\
+\end{pmatrix}, g = \begin{pmatrix}
+	1 \\
+	0 \\
+	1 \\
+\end{pmatrix}.$$
+
+Таким чином, жорданів базис --- $\{f, e, g\}$, $U = \begin{pmatrix}
+	4 & 0             & 1 \\
+	3 & -\dfrac{1}{2} & 0 \\
+	4 & 3             & 1 \\
+\end{pmatrix} $ --- матриця переходу.
+
+Приклад 3.
+
+$$A = \begin{pmatrix}
+	3  &  0 & -1 \\
+	-2 &  1 &  1 \\
+	3  & -1 & -1 \\
+\end{pmatrix} $$
+
+Знаходимо власні числа:
+
+$$\det(A-\lambda I) = \left| \begin{pmatrix}
+	3 - \lambda & 0           & -1 \\
+	-2          & 1 - \lambda & 1 \\
+	3           & -1          & -1 -\lambda \\
+\end{pmatrix} \right| = \left| \begin{pmatrix}
+	1 - \lambda & 1 - \lambda & 0 \\
+	-2          & 1 - \lambda & 1 \\
+	3           & -1          & -1 -\lambda \\
+\end{pmatrix} \right| = (1 - \lambda) \left| \begin{pmatrix}
+	1  & 1           & 0 \\
+	-2 & 1 - \lambda & 1 \\
+	3  & -1          & -1 -\lambda \\
+\end{pmatrix} \right|$$
+
+$$ = (1 - \lambda) \left| \begin{pmatrix}
+	1  & 0           & 0 \\
+	-2 & 3 - \lambda & 1 \\
+	3  & -4          & -1 -\lambda \\
+\end{pmatrix} \right|= (1 - \lambda) \left| \begin{pmatrix}
+	3 - \lambda & 1 \\
+	-4          & -1 -\lambda \\
+\end{pmatrix} \right| = (1 - \lambda)(\lambda^2 - 2\lambda + 1) = (1 - \lambda)^3 = 0.$$
+
+$$\lambda_{1, 2, 3} = 1.$$
+
+Знайдемо власні вектори:
+
+$$\begin{pmatrix}
+	2  & 0  & -1 \\
+	-2 & 0  & 1  \\
+	3  & -1 & -2 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix}.$$
+
+$$\rang(A-I) = 2 \Rightarrow \dim \Ker(A-I) = 3 - 1 = 2 \Rightarrow 1 \text{ власний вектор } \Rightarrow  $$
+
+$$\Rightarrow 1 \text{ клітинка Жордана}.$$
+
+Тому можемо вказати жорданову форму матриці $A$:
+
+$$\tilde{A} = \begin{pmatrix}
+	1 & 1 & 0 \\
+	0 & 1 & 1 \\
+	0 & 0 & 1 \\
+\end{pmatrix}.$$
+
+$$\left\{ \begin{pmatrix}
+	x_3 - 2x_1 \\
+	x_2 + 2x_3 = 3x_1
+\end{pmatrix} \right., x_2 = -x_1; $$
+
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_1 \\
+	-x_1 \\
+	2x_1 \\
+\end{pmatrix} = x_1 \begin{pmatrix}
+	1 \\
+	-1 \\
+	2 \\
+\end{pmatrix}, \text{ Власний вектор } f = \begin{pmatrix}
+	1 \\
+	-1 \\
+	2 \\
+\end{pmatrix};$$
+
+Шукаємо ланцюжок приєднаних векторів: $e_1$ приєднаний до $f$; $e_2$ --- до $e_1$.
+
+$$\begin{pmatrix}
+	2  & 0  & -1 \\
+	-2 & 0  & 1  \\
+	3  & -1 & -2 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	1 \\
+	-1 \\
+	2 \\
+\end{pmatrix}, \text{ Система сумісна}.$$
+
+Частковий розв’язок системи знайдемо при $x_1 = 0$;
+
+$$\left\{ \begin{pmatrix}
+	x_3 = -1 \\
+	-x_2 - 2 x_3 = 2 \\
+\end{pmatrix} \right. \Rightarrow x_2 = 2 - 2 = 0; $$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	-1 \\
+\end{pmatrix},  e_1 = \begin{pmatrix}
+	0 \\
+	0 \\
+	-1 \\
+\end{pmatrix} $$
+
+$$\begin{pmatrix}
+	2  & 0  & -1 \\
+	-2 & 0  & 1  \\
+	3  & -1 & -2 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	-1 \\
+\end{pmatrix}.$$
+
+$$x_1 = 0; \left\{\begin{matrix}
+	-x_3 = 0 \\
+	-x_2 - 2x_3 = -1 \\
+\end{matrix} \right.; \Rightarrow x_2 = 1;$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	1 \\
+	0 \\
+\end{pmatrix}, e_2 = \begin{pmatrix}
+	0 \\
+	1 \\
+	0 \\
+\end{pmatrix}$$
+
+Жорданів базис --- $\{f, e_1, e_2\}$, матриця переходу $U = \begin{pmatrix}
+	 1 &  0 & 0 \\
+	-1 &  0 & 1 \\
+	 2 & -1 & 0 \\
+\end{pmatrix}$.
+
+Не зайвим буде зробити перевірку.
+
+$$\det U = 1; U^{T} = \begin{pmatrix}
+	1 & -1 & 2 \\
+	0 & 0  & -1 \\
+	0 & 1  & 0 \\
+\end{pmatrix}; U^{-1} = \begin{pmatrix}
+	1 & 0 & 0 \\
+	2 & 0 & -1 \\
+	1 & 1 & 0 \\
+\end{pmatrix}. $$
+
+$$U^{-1} A U = \begin{pmatrix}
+	1 & 0 & 0 \\
+	2 & 0 & -1 \\
+	1 & 1 & 0 \\
+\end{pmatrix} \begin{pmatrix}
+	3  & 0  & -1 \\
+	-2 & 1  &  1 \\
+	3  & -1 & -1 \\
+\end{pmatrix} U = \begin{pmatrix}
+	3 & 0 & -1 \\
+	3 & 1 & -1 \\
+	1 & 1 & 0  \\
+\end{pmatrix} \begin{pmatrix}
+	1  & 0  & 0  \\
+	-1 & 0  & -1 \\
+	2  & -1 & 0  \\
+\end{pmatrix}  = $$
+
+$$= \begin{pmatrix}
+	1 & 1 & 0 \\
+	0 & 1 & 1 \\
+	0 & 0 & 1 \\
+\end{pmatrix} = \tilde{A}.$$
+
+Приклад 4.
+
+$$A = \begin{pmatrix}
+	4  & 1 & 1  \\
+	-2 & 1 & -2 \\
+	1  & 1 & 4  \\
+\end{pmatrix} $$
+
+Знаходимо власні числа:
+
+$$\det(A-\lambda I) = \left| \begin{pmatrix}
+	4 - \lambda & 1           & 1 \\
+	-2          & 1 - \lambda & -2 \\
+	1           & 1           & 4 -\lambda \\
+\end{pmatrix} \right| = \left| \begin{pmatrix}
+	3 - \lambda & 0           & 1 \\
+	-3 +\lambda & 3 - \lambda & -2 \\
+	0           & -3 +\lambda & 4 -\lambda \\
+\end{pmatrix} \right| = (3 - \lambda)^2 \left| \begin{pmatrix}
+	1  & 0  & 1 \\
+	-1 & 1  & -2 \\
+	0  & -1 & 4 -\lambda \\
+\end{pmatrix} \right| = $$
+
+$$ = (3 - \lambda)^2 \left| \begin{pmatrix}
+	1 & 0  & 1 \\
+	0 & 1  & -1 \\
+	0 & -1 & 4 -\lambda \\
+\end{pmatrix} \right| = (3 - \lambda)^2 \left| \begin{pmatrix}
+	1  & -1 \\
+	-1 & 4 -\lambda \\
+\end{pmatrix} \right| = (3 - \lambda)^2(-\lambda + 3) = -(3 - \lambda)^3 = 0$$
+
+$$\lambda_{1, 2, 3} = 3.$$
+
+Шукаємо власні вектори:
+
+$$\begin{pmatrix}
+	1  & 1  & 1  \\
+	-2 & -2 & -2 \\
+	1  & 1  & 1  \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix};$$
+
+$$\rang(A-3I) = 1 \Rightarrow \dim \Ker (A-3I) = 3 - 1 = 2 \Rightarrow 2 \text{ власні вектори } \Rightarrow $$
+
+$$\Rightarrow 2 \text{ клітинки Жордана}.$$
+
+
+Тому $$\tilde{A} = \begin{pmatrix}
+	3 & 1 & 0 \\
+	0 & 3 & 0 \\
+	0 & 0 & 3 \\
+\end{pmatrix}. $$
+
+Розв’язуємо систему: 
+
+$$x_1 = -x_2 - x_3; $$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	-x_2 - x_3 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = x_2 \begin{pmatrix}
+	-1 \\
+	1 \\
+	0 \\
+\end{pmatrix} + x_3 \begin{pmatrix}
+	-1 \\
+	0 \\
+	1 \\
+\end{pmatrix} $$
+
+$$f = \begin{pmatrix}
+	-1 \\
+	1 \\
+	0 \\
+\end{pmatrix}, g = \begin{pmatrix}
+	-1 \\
+	0 \\
+	1 \\
+\end{pmatrix} \text{ --- власні вектори}. $$
+
+Якщо записати неоднорідні системи для пошуку приєднаного вектора
+$(A-3I)e = f$ і $(A-3I)e = g$ то можна пересвідчитися, що вони є
+несумісними. Але це не означає, що приєднаного вектора не існує. Він
+обов’язково повинен знайтися до лінійної комбінації власних векторів $f$ і $g$:
+
+$$\alpha f + \beta g = \begin{pmatrix}
+	-\alpha - \beta \\
+	\alpha \\
+	\beta \\
+\end{pmatrix} $$
+
+Тоді система для пошуку приєднаного вектора:
+
+$$\begin{pmatrix}
+	1  & 1  & 1  \\
+	-2 & -2 & -2 \\
+	1  & 1  & 1  \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	-\alpha - \beta \\
+	\alpha \\
+	\beta \\
+\end{pmatrix} $$
+
+Нам лишається знайти, при яких значеннях $\alpha$ і $\beta$ ця система є сумісною.
+
+Ранг розширеної матриці повинен дорівнювати 1.
+
+$$\left| \begin{matrix}
+	1  & - \alpha - \beta \\
+	-2 & \alpha \\
+\end{matrix} \right| = -\alpha - 2\beta = 0 \Rightarrow \alpha + 2\beta = 0 $$
+
+$$\left| \begin{matrix}
+	1 & - \alpha - \beta \\
+	1 & \beta \\
+\end{matrix} \right| = \alpha + 2\beta = 0 $$
+
+Ці умови виконуються при $\beta = 1, \alpha = -2 $. Тобто до вектора
+$h = \alpha f + \beta g = \begin{pmatrix}
+	1 \\
+	-2 \\
+	1 \\
+\end{pmatrix}$
+приєднується вектор e. Знайдемо його: 
+
+$$\begin{pmatrix}
+	1  & 1  & 1  \\
+	-2 & -2 & -2 \\
+	1  & 1  & 1  \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	1  \\
+	-2 \\
+	1  \\
+\end{pmatrix}. $$
+
+Нехай $x_2 = x_3 = 0; \Rightarrow x_1 = 1, e = \begin{pmatrix}
+	1 \\
+	0 \\
+	0 \\
+\end{pmatrix}$.
+
+Жорданів базис складають вектори $\{h, e, f\}$ чи $\{h, e, g\}$.
+
+$$U = \begin{pmatrix}
+	1  & 1 & -1 \\
+	-2 & 0 & 1 \\
+	1  & 0 & 0 \\
+\end{pmatrix}.$$
+
+Звертаємо увагу на той факт, що розстановка клітинок в матриці $\tilde{A}$ повинна
+узгоджуватися з розстановкою базисних векторів. Так вигляд
+
+$$\tilde{A} = \begin{pmatrix}
+	3 & 0 & 0 \\
+	0 & 3 & 1 \\
+	0 & 0 & 3 \\
+\end{pmatrix} \text{ буде мати в базисі } \{g, h, e\}. $$ 
+
+\section{Функції від матриць}
+
+1. Розглянемо многочлен $m$-го степеня $f(t) = a_0 + a_1 t + ... + a_m t^m$.
+Нехай $A$ --- матриця. Треба знайти $f(A)$:
+
+$f(A) = a_0 I + a_1 A + ... + a_m A^m$, де I --- одинична матриця.
+
+Матрицю $A$ можна розглядати, як матрицю деякого лінійного оператора в
+канонічному базисі.
+
+Якщо ми перейдемо до іншого базису, то $\tilde{A} = V^{-1} A V$, $A = V \tilde{A} V^{-1}$.
+
+Розглянемо $a_k A^k$:
+
+$a_k V \tilde{A} V^{-1} \cdot V \tilde{A} V^{-1} \cdot ... \cdot V \tilde{A} V^{-1}
+=a_k V \tilde{A} (V^{-1} V) \tilde{A} (V^{-1}V) \cdot ... (V^{-1}V) \tilde{A} V^{-1}
+= a_k V \tilde{A}I\tilde{A}I \cdot ... \cdot I\tilde{A}V^{-1}
+= a_k V \tilde{A}^k V^{-1}$.
+
+Тому 
+
+$f(A) = a_0 V I V^{-1} + a_1 V \tilde{A} V^{-1} + ... + a_m V \tilde{A}^m V^{-1}
+= V(a_0 I + a_1 \tilde{A} + ... + a_m \tilde{A}^m) V^{-1}
+= Vf(\tilde{A})V^{-1}$.
+
+Тобто $f(A)1 = Vf(\tilde{A})V^{-1}$
+
+2. Функції від матриці, що має жорданову нормальну форму.
+Нехай тепер матриця $A$ деяким перетворенням $V$ звелась до матриці $\tilde{A}$, де
+$\tilde{A}$ --- клітинка Жордана порядку n:
+
+$$\tilde{A} = \begin{pmatrix}
+	\lambda & 1 & 0 & ... & 0 & 0 \\
+	0 & \lambda & 1 & ... & 0 & 0 \\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+	0 & 0 & 0 & ... & \lambda & 1 \\
+	0 & 0 & 0 & ... & 0 & \lambda \\
+\end{pmatrix}. $$
+
+Треба обчислити $f(\tilde{A})$.
+
+Для цього представимо $\tilde{A} = \lambda I + N$, $N = \tilde{A} - \lambda I$, де $N$ --- одна з
+нільпотентних матриць:
+
+$$N = \begin{pmatrix}
+	0 & 1 & 0 & ... & 0 & 0 \\
+	0 & 0 & 1 & ... & 0 & 0 \\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+	0 & 0 & 0 & ... & 0 & 1 \\
+	0 & 0 & 0 & ... & 0 & 0 \\
+\end{pmatrix}, N^n = O, \text{ де } O \text{ --- нульова матриця}$$
+
+Розкладемо многочлен $f(t)$ за формулою Тейлора в околі точки $\lambda$:
+
+$$f(t) = f(\lambda)
+		+ \dfrac{f'(\lambda)}{1!}(t - \lambda)
+		+ \dfrac{f''(\lambda)}{2!}(t - \lambda)^2
+		+ ...
+		+ \dfrac{f^{(m)}(\lambda)}{m!}(t - \lambda)^m.$$
+
+Остаточний член дорівнює нулю.
+
+$$
+f(\tilde{A})
+= f(\lambda)I
++ \dfrac{f'(\lambda)}{1!}(\tilde{A} - \lambda I)
++ \dfrac{f''(\lambda)}{2!}(\tilde{A} - \lambda I)^2
++ ...
++ \dfrac{f^{(m)}(\lambda)}{m!}(\tilde{A} - \lambda I)^m
+= f(\lambda)I
++ \dfrac{f'(\lambda)}{1!}N
++ \dfrac{f''(\lambda)}{2!}N^2
++ ...
++ \dfrac{f^{(m)}(\lambda)}{m!}N^m 
+= \begin{pmatrix}
+	f(\lambda) & \dfrac{f'(\lambda)}{1!} & \dfrac{f''(\lambda)}{2!} & \dfrac{f'''(\lambda)}{3!} & ... & \dfrac{f^{(m-1)}(\lambda)}{(m-1)!} \\
+	0 & f(\lambda) & \dfrac{f'(\lambda)}{1!} & \dfrac{f''(\lambda)}{2!} & ... & ...  \\
+	0 & 0 & f(\lambda) & \dfrac{f'(\lambda)}{1!} & ... & ... \\
+	... & ... & ... & ... & ... & ... & ... \\
+	... & ... & ... & ... & ... & ... & f(\lambda) \\
+\end{pmatrix}.
+$$
+
+Якщо $m \geqslant n$, то кількість доданків $\leqslant m + 1$.
+
+3. Узагальнення 1.
+Якщо $\tilde{A}$ має клітинно-діагональий вигляд:$\tilde{A} = \begin{pmatrix}
+	\tilde{A}_1 &             & 0           \\
+	            & \tilde{A}_2 &             \\
+	0           &             & \tilde{A}_3 \\
+\end{pmatrix}$, де $\tilde{A}_i$ --- клітина Жордана, то
+
+
+$$f(\tilde{A}) = \begin{pmatrix}
+	f(\tilde{A}_1) &                & 0              \\
+	               & f(\tilde{A}_2) &                \\
+	0              &                & f(\tilde{A}_3) \\
+\end{pmatrix}.$$
+
+4. Узагальнення 2.
+
+Описаний в пункті 3 спосіб обчислення многочлена від матриці годиться і
+для обчислення таких функцій, як $e^t$, $\sin t$, $\ln t$ і т.д. 
+
+\section{Евклідів простір}
+
+Абстрактні лінійні простори, які ми вивчали, в деякому сенсі бідніші
+своїми властивостями, ніж, скажімо, простір направлених відрізків $E^3$. В $E^3$
+ми обчислювали скалярний, векторний, мішаний добутки, знаходили
+довжини, кути, площі і т.і. 
+
+Дещо подібне ми хочемо мати і в загальному випадку. Далі в тексті те,
+що буде записано в круглих дужках, буде відноситись до комплексного
+випадку.
+
+Озн. Лінійний простір $E$ над полем дійсних (комплексних) чисел
+називається евклідовим (унітарним), якщо на ньому введена бінарна операція
+$(x,y) \in R (C)$, $x,y \in E$, яку будемо називати скалярним добутком, з
+наступними властивостями:
+
+1) $(x,y) = (y,x), ((x,y) = \overline{(y,x)}),$
+
+2) $(\alpha x, y) = \alpha(x, y)$, $(x, \alpha y) = \alpha(x, y) ((x, \alpha y) = \overline{\alpha}(x, y))$,
+
+3) $(x_1 + x_2, y) = (x_1, y) + (x_2, y)$, $(x, y_1 + y_2) = (x, y_1) + (x, y_2)$,
+
+4) $(x, x) \geqslant$, $(x,x) = 0 \Leftrightarrow x = 0$.
+
+Приклади:
+
+1. $E = R^n$, $x = \begin{pmatrix}
+	x_1 \\
+	\vdots \\
+	x_n \\
+\end{pmatrix}$, $y = \begin{pmatrix}
+	y_1 \\
+	\vdots \\
+	y_n \\
+\end{pmatrix}$,
+
+$$(x,y) = \sum\limits_{i=1}^n x_i y_i,$$
+
+2. $E = C[a,b]$
+
+$$(f(t),g(t)) = \int_a^b f(t) g(t) dt.$$
+
+Те, що операції в цих прикладах дійсно є скалярними добутками,
+пропонується довести самостійно.
+
+\subsection*{Нерівність Коші-Буняковського}
+
+Теорема. Для довільних векторів $x$, $y$ евклідового простору $E$
+справедлива нерівність: 
+ 
+$$(x,y)^2 \leqslant (x,x)(y,y).$$
+ 
+Доведення: Розглянемо скалярний добуток
+
+$(\alpha x + y, \alpha x + y) \geqslant 0$ --- за властивістю 4).
+
+За властивостями 1) - 3)
+
+$(\alpha x + y, \alpha x + y)
+= (\alpha x, \alpha x) + (\alpha x,y) + (y, \alpha x) + (y,y)
+= \alpha^2(x,x) + 2\alpha(x,y) + (y,y) \geqslant 0.$
+
+Цей вираз можна розглядати, як квадратний тричлен від змінної $\alpha$,
+дискримінант якого $D \geqslant 0$.
+
+$D = (x,y)^2 - (x,x)(y,y) \leqslant 0 \Rightarrow  (x,y)^2 \leqslant (x,x)(y,y)$, що і треба було
+довести.
+
+
+Для прикладів 1) і 2) ця нерівність виглядає так:
+
+$$\left( \sum\limits_{i=1}^n x_i y_i \right)^2  \leqslant \sum\limits_{i=1}^n x_i^2 \sum\limits_{i=1}^n y_i^2,$$
+
+$$\left( \int_a^b f(t) g(t) dt \right)^2 \leqslant \int_a^b f^2(t) dt \int_a^b g^2(t) dt. $$
+
+\subsection*{Ортогональність. Ортонормований базис}
+
+Озн. Нормою (або довжиною) вектора $x$ евклідового простору $E$
+називається невід’ємне число $||x|| = \sqrt{(x,x)}$.
+
+Якщо $||x|| = 1$, то $x$ називається нормованим.
+
+Вл. $||\lambda x||
+= \sqrt{(\lambda x,\lambda x)}
+= \sqrt{\lambda^2(x,x)}
+= |\lambda| ||x||$.
+
+Для довільного вектора $x \neq 0$ можна дістати нормований вектор:
+$x^0 = \dfrac{x}{||x||}$ --- операція нормування.
+
+Озн. Вектори $x, y \in E$ називаються ортогональними, якщо $(x, y) = 0$. 
+
+Озн. Система векторів $x_1$, $x_2$, ..., $x_n$ називається ортогональною, якщо вони
+попарно ортогональні і жоден з них не дорівнює нулю, тобто
+$(x_i, x_j) = 0$, $i \neq j$, $x_i \neq 0$, $i = 1, ..., n$, $j = 1, ..., n$.
+
+Твердження. Ортогональна система векторів є лінійно-незалежною.
+
+Доведення (від супротивного) Нехай система векторів $x_1$, $x_2$, ..., $x_n$ --- лінійнозалежна,
+$(x_i, x_j) = 0$, $i \neq j \Rightarrow \exists \alpha_i \neq 0: \alpha_1 x_1 + \alpha_2 x_2 + ... + \alpha_n x_n = 0$.
+
+Домножимо цю рівність скалярно на $x_i$ ($i = 1, 2, ..., n$):
+$\alpha_1(x_1,x_i) + \alpha_2(x_2,x_i) + ... + \alpha_i(x_i,x_i) + ... + \alpha_n(x_n,x_i) = (o, x_i) = 0$.
+
+Отже, $\alpha_i(x_i,x_i) = 0 \Rightarrow \alpha_i = 0$ (оскільки $(x_i,x_i) \neq 0$).
+
+Отримали суперечність. Отже, $x_1$, $x_2$, ..., $x_n$ --- лінійно-незалежна.
+
+Наслідок. Будь-яка ортогональна система $n$ ненульових векторів $n$-вимірного
+Евклідового простору $E^n$ є базисом цього простору.
+
+Теорема. У кожному $n$-вимірному евклідовому просторі існують
+ортогональні базиси.
+
+Доведення теореми конструктивне (процес ортогоналізації ГрамаШмідта).
+
+Нехай $E^n$ --- евклідів простір, $x_1$, $x_2$, ..., $x_n$ --- деякий базис $E^n$. Побудуємо
+ортогональний базис $y_1$, $y_2$, ..., $y_n$ цього простору, $(y_i, y_j) = 0$, $i \neq j$.
+
+Побудова.
+
+1. $y_1 = x_1$,
+
+2. $y_2 \in \Lambda(y_1, x_2)$, $(y-1, y_2) = 0$.
+
+Шукаємо $y^2$ у вигляді $y^2 = x_2 - \alpha y_1$.
+
+Константу $\alpha$ знаходимо з умови $(y_1, y_2) = 0$: $(y_1, x_2 - \alpha y_1) = 0$,
+$(y_1, x_2) - \alpha(y_1, y_1) = 0$. Звідси: $\alpha = \dfrac{(y_1,x_2)}{(y_1,y_1)} = \dfrac{(y_1,x_2)}{||y_1||^2}$.
+
+
+3. $y_3 \in \Lambda(x_1, x_2, x_3) = \Lambda(y_1, y_2, x_3)$.
+
+$(y_3, y_1) = 0$, $(y_3, y_2) = 0$.
+
+Аналогічно: $y_3 = x_3 - \alpha y_1 - \beta y_2$, $\alpha = \dfrac{(y_1, x_3)}{||y_1||^2}$,
+$\beta = \dfrac{(y_2, x_3)}{||y_2||^2}$.
+
+...............
+
+k. $y_k \in \Lambda(y_1, ..., y_{k-1}, x_k)$.
+
+$(y_k, y_i) = 0$, $i = 1, ..., k-1$
+
+$y_k = x_k - \alpha_1 y_1 - ... - \alpha_{k-1} y_{k-1}, \alpha_i = \dfrac{(y_i, x_k)}{||y_i||^2}$
+
+Ці міркування продовжуємо до тих пір, доки не побудуємо ортогональну
+систему векторів $y_1$, $y_2$, ..., $y_n$.
+
+Отримали $y_1$, $y_2$, ..., $y_n$ --- ортогональний базис. Теорему доведено.
+
+
+Приклад. Застосувавши процес ортогоналізації, побудувати ортогональний
+базис підпростору $L \subset R^4$, натягнутого на вектори: $x_1 = (2, 3, -4, -6)$,
+$x_2 = (1, 8, -2, -16)$, $x_3 = (3,11, -6, -22)$.
+
+Розв’язання:
+
+$y_1 = x_1 = (2, 3, -4, -6);$
+
+$y_2 = x_2 - \alpha y_1; \alpha = \dfrac{(y_1, x_2)}{||y_1||^2}
+= \dfrac{2 + 24 + 8 + 96}{2^2 + 3^2 + (-4)^2 + (-6)^2} = \dfrac{130}{65} = 2;$
+
+$y_2 = x_2 - 2 y_1 = (-3, 2, 6, -4).$
+
+$y_3 = x_3 - \alpha y_1 - \beta y_2;$
+
+$\alpha = \dfrac{(y_1, x_3)}{||y_1||^2}
+= \dfrac{6 + 33 + 24 + 132}{65} = \dfrac{195}{65} = 3;$
+
+$\beta = \dfrac{(y_2, x_3)}{||y_2||^2}
+= \dfrac{-9 + 22 - 36 + 88}{(-3)^2 + 2^2 + 6^2 + (-4)^2} = \dfrac{65}{65} = 1;$
+
+$y_3 = x_3 - 3 y_1 - y_2 = (0, 0, 0, 0)$.
+
+Цей результат означає, що вектор $x_3$ лінійно залежить від $x_1$ і $x_2$.
+
+Відповідь. Ортогональний базис $L$ --- вектори $y_1 = (2, 3, -4, -6)$,
+$y_2 = (-3, 2, 6, -4)$; $\dim L = 2$.
+
+Нехай $E$ --- евклідів простір, $\dim E = n$.
+
+Нехай $\{e_1, e_2, ..., e_n\}$ --- ортонормований базис, тобто:
+
+$$(e_i, e_j) = \delta_{ij} = \left\{ \begin{array}{l}
+	1, i = j \\
+	0, i \neq j
+\end{array} \right., (\delta_{ij} \text{ --- символ Кронекера}).$$
+
+З першого семестра ми знаємо, які переваги дає нам введення в просторі $E^3$
+ортонормованого базиса $\{\overrightarrow{i}, \overrightarrow{j}, \overrightarrow{k} \}$:
+спрощуються формули для скалярного, векторного, мішаного добутків векторів і т.і.
+
+Щось подібне зробимо і в просторі $E$.
+
+1. В такому базисі дуже просто визначити координати довільного вектора.
+$x \in E$; $x = \sum\limits_{i=1}^n x_i e_i$. Домножимо цю рівність скалярно на $e_k$:
+
+$(x, e_k)
+= (\sum\limits_{i=1}^n x_i e_i, e_k)
+= \sum\limits_{i=1}^n x_i (e_i, e_k)
+= x_k (e_k, e_k)
+= x_k$
+
+(оскільки $(e_i, e_k) \neq 0$ тільки при $i = k$).
+
+Тобто $x = \sum\limits_{i=1}^n x_i y_i
+= \sum\limits_{k=1}^n x_k e_k
+= \sum\limits_{k=1}^n (x, e_k) e_k.$
+
+(Якщо $E$ буде нескінченновимірним простором, ми отримали аналог
+розкладу елемента $x$ в ряд Фур’є).
+
+2. Скалярний добуток.
+
+Нехай $x, y \in E$.
+
+$x = \sum\limits_{i=1}^n x_i e_i$, $y = \sum\limits_{k=1}^n y_k e_k$.
+
+$(x,y)
+= (\sum\limits_{i=1}^n x_i e_i, \sum\limits_{k=1}^n y_k e_k)
+= \sum\limits_{i=1}^n \sum\limits_{k=1}^n (x_i e_i, y_k e_k)
+= \sum\limits_{i=1}^n \sum\limits_{k=1}^n x_i y_k (e_i, e_k)
+= \sum\limits_{i=1}^n x_i y_i (e_i, e_i)
+= \sum\limits_{i=1}^n x_i y_i.$
+
+Отримали $(x,y) = \sum\limits_{i=1}^n x_i y_i.$
+
+3. Коефіцієнти матриці лінійного оператора.
+
+Нехай $A$ --- лінійний оператор.
+
+$A:  e_1 \rightarrow e_2$, $E_1$, $E_2$ --- евклідові простори.
+
+$\dim E_1 = n$, $\{e_1, e_2, ..., e_n\}$ --- ортонормований базис $E_1$.
+
+$\dim E_2 = m$, $\{f_1, f_2, ..., f_n\}$ --- ортонормований базис $E_2$.
+
+$(e_i,e_j) = (f_i,f_j) = \delta_{ij}$.
+
+Нехай $A$ --- матриця лінійного оператора $A$ у вказаних базисах.
+
+$A = \begin{pmatrix}
+	a_{11} & ... & a_{1j} & ... & a_{1n} \\
+	& & \vdots & & \\
+	a_{i1} & ... & a_{ij} & ... & a_{in} \\
+	& & \vdots & & \\
+	a_{m1} & ... & a_{mj} & ... & a_{mn} \\
+\end{pmatrix}$, $j$-й стовпчик цієї матриці $\begin{pmatrix}
+	a_{1j} \\
+	\vdots \\
+	a_{ij} \\
+	\vdots \\
+	a_{mj} \\
+\end{pmatrix}$, і ми знаємо, звідки взялися ці числа.
+
+$A e_j = \sum\limits_{k=1}^m a_{kj} f_k$
+
+$(A e_j, f_i)
+= (\sum\limits_{k=1}^m a_{kj} f_k, f_i)
+= \sum\limits_{k=1}^m a_{kj} (f_k, f_i)
+= a_{ij}$.
+
+Врахували те, що $(f_k, f_i) \neq 0$ при $k = i$.
+
+Маємо $a_{ij} = (A e_j, f_i)$.
+
+Частковий випадок.
+
+$A: E \rightarrow E$, $\{e_1, ..., e_n\}$ --- ортонормований базис.
+
+Тоді $a_{ij} = (A e_j, e_i)$.
+
+\subsection*{Ортогональні підпростори} % p 49
+
+Нехай $L_1 \subset E$, $L_2 \subset E$ ($L_1$, $L_2$ --- підпростори евклідового простору $E$).
+
+Озн. Підпростори $L_1$, $L_2$ називаються ортогональними (позначається $L_1 \perp L_2$),
+якщо $\forall x \in L_1$, $\forall y \in L_2: (x,y) = 0$.
+
+Твердження. $L_1 \perp L_2 \Leftrightarrow$ коли кожний базисний вектор $L_1$ ортогональний до
+кожного базисного вектора $L_2$.
+ 
+
+Доведення.
+Нехай $\{e_1, ..., e_n\}$ --- базис $L_1$, $\{f_1, ..., f_m\}$ --- базис $L_2$.
+
+1) ($\Rightarrow$) Доведемо, що $L_1 \perp L_2 \Rightarrow e_i \perp f_i$.
+За означенням ортогональності для $\forall i = 1, ..., n$, $\forall j = 1, ..., m: e_i \perp f_j$.
+
+2) ($\Leftarrow$) Доведемо, що $e_i \perp f_i \Rightarrow L_1 \perp L_2$.
+
+Нехай $\forall i, \forall j e_j \perp f_j \Rightarrow (e_i, f_j) = 0$.
+
+Якщо $x \in L_1: x = \sum\limits_{i=1}^n x_i e_i$, а $y \in L_2: y = \sum\limits_{j=1}^m y_j f_j$.
+
+Тоді $(x,y)
+= (\sum\limits_{i=1}^n x_i e_i, \sum\limits_{j=1}^m y_j f_j)
+= (\sum\limits_{i=1}^n \sum\limits_{j=1}^m x_i y_j( e_i, f_j)
+= 0.$
+
+\subsection*{Ортогональна сума підпросторів}
+
+Озн. Сума ортогональних підпросторів $L_1$ і $L_2$ називається ортогональною
+сумою і позначається $L_1 \xor L_2$.
+
+Твердження.
+Ортогональна сума ненульових підпросторів є прямою.
+
+Доведення.
+$L_1 \subset E$, $L_2 \subset E$.
+Нехай $\{e_1, e_2, ..., e_n\}$ --- ортонормований базис $L_1$,
+$\{f_1, f_2, ..., f_m\}$ --- ортонормований базис $L_2$.
+
+Тобто $(e_i,e_j) = (f_i,f_j) = \delta_{ij}$
+
+Розглянемо систему $\{e_1, e_2, ..., e_n, f_1, f_2, ..., f_m\}$. (*)
+
+Зрозуміло, що кожний вектор $L_1 + L_2$ виражається через вектори системи (*).
+
+Але система (*) складається із попарно ортогональних векторів, тому вона є
+лінійно-незалежною.
+
+Тобто система (*) є повною в $L_1 + L_2$ і лінійно-незалежною $\Rightarrow$ вона є базисом
+$L_1 + L_2$ $\Rightarrow L_1 + L_2$ є прямою, що і треба було довести. Тобто $L_1 \xor L_2$.
+
+\subsection*{Ортогональне доповнення}
+
+Нехай $L \subset E$ ($L$ --- не обов’язково підпростір, може бути якась непуста
+множина), $L \neq \emptyset$.
+
+Озн. Ортогональним доповненням простору $L$ називається
+$L^{\perp} = \{y \in E: \forall x \in L, (x, y) = 0\}$.
+
+Твердження. $L^{\perp}$ --- лінійний підпростір $E$.
+
+Доведення.
+Нехай $y, y' \in L^{\perp}$. Тоді $\forall \alpha, \beta: \alpha y + \beta y' \in l^{\perp}$,
+тому що для $\forall x \in L$:
+$(x, \alpha y + \beta y') = \alpha(x,y) + \beta(x,y') = 0 \Rightarrow L^{\perp} \subset E$.
+
+Скористалися тим, що $(x, y) = (x, y') = 0$.
+
+Теорема. Будь-який евклідів простір $E$ є ортогональною сумою будь-якого
+свого лінійного підпростору $L$ і його ортогонального доповнення, тобто
+$l \subset E: E = L \xor L^{\perp}$.
+
+Доведення.
+Нехай $\{e_1, e_2, ..., e_n\}$ --- ортогональний базис $L$, а
+$\{f_1, f_2, ..., f_m\}$ --- ортогональний базис $L^{\perp}$.
+
+Система $\{e_1, e_2, ..., e_n, f_1, f_2, ..., f_m\}$ --- ортогональна $\Rightarrow$
+вона лінійно-незалежна.
+
+Якщо вона не є базисом $E$, то її можна доповнити до ортогонального базису $E$.
+
+Нехай вектор $r$ --- якийсь доданий базисний вектор. Вектор $r \perp$ до всіх
+$e_1$, ..., $e_s \Rightarrow r \perp L^{\perp}$, з іншого боку $r \perp$ до всіх 
+$f_1$, ..., $f_m \Rightarrow r \perp L^{\perp} \Rightarrow r \in L \Rightarrow$
+$\Rightarrow r \in L \cap L^{\perp}$.
+
+Але $L \xor L^{\perp}$ --- пряма сума, для такої суми $L \cap L^{\perp} = \{0\} \Rightarrow r = \overline{0}$.
+
+Таким чином, базисом $E$ є об’єднання базисів $L$ і $L^{\perp}$, що і доводить теорему.
+
+Наслідок. $\dim E =  \dim L + \dim L^{\perp}$.
+
+\section{Оператори в евклідових (унітарних) просторах} % p52
+
+\subsection*{Спряжений оператор}
+
+Озн. Унітарний простір --- це евклідів простір над полем комплексних чисел.
+$(x,y) = \overline{(y,x)}$, $(x,\alpha y) = \overline{\alpha}(x,y)$.
+
+Нехай $A$ --- лінійний оператор, який діє в унітарних просторах.
+$A: E_1 \rightarrow E_2$.
+
+Озн. Оператор $A^*$ називається спряженим до $A$, якщо $\forall x \in E_1$, $\forall y \in E_2$
+виконується $(A x, y) = (x, A^*y)$.
+
+Оператор $A^*$ має наступні властивості:
+
+1. $(A^*)^* = A$,
+
+2. $(A = B)^* = A^* + B^*$,
+
+3. $(\alpha A)^* = \overline{a} A^*$,
+
+4. $(AB)^* = B^*A^*$,
+
+5. $(A^*)^{-1} = (A^{-1})^*$.
+
+Доведемо властивості 1 та 3.
+
+1) $(\alpha x,y) = (x,A^* y) = \overline{(A^*y,x)} = \overline{(y,(A^*)^*x)} = ((A^*)^*x,y)$.
+Через те, що ця рівність виконується для $\forall x, y \Rightarrow A = (A^*)^*$.
+
+2) $(\alpha A x, y) = (x, (\alpha A)^* y)$.
+
+$(\alpha A x, y) = (A x, \overline{\alpha} y) = (x, \overline{\alpha} A^* y)$.
+
+$\Rightarrow (\alpha A)^* = \overline{\alpha} A^*$.
+
+Доведення властивості 5 див. у підручнику Воєводіна «Лінійна алгебра»
+стор. 242.
+
+\subsection*{Матриці спряжених операторів в ортобазисі}
+
+Нехай у просторі $E_1$ зафіксовано ортонормований базис $\{e_1, e_2, ..., e_n\}$, а у
+просторі $E_2$ --- ортонормований базис $\{f_1, f_2, ..., f_m\}$.
+
+І нехай у цих базисах побудовано матрицю операторів $A$ і $A^*$ з елементами
+$a_{ij}$ та $a^*_{ij}$.
+
+Як відомо $a_{ij} = (Ae_j, f_i)$.
+
+Так само і для $a_{ij}^*: a_{ij}^* = (A^* f_j, e_i) = \overline{(e_i, A^* f_j)}
+= \overline{(A e_i, f_j)} = \overline{a_{ji}}$.
+
+Тобто $a_{ij}^* = \overline{a_{ji}}$ чи $A^* = \overline{A^T}$.
+
+Якщо $a_{ij} \in R$, то $A^* = A^T$.
+
+\subsection*{Самоспряжений оператор}
+
+Нехай $A$ --- лінійний оператор, який діє в унітарному просторі $E$.
+$A: E \rightarrow E$.
+
+Озн. Оператор $A$ називається самоспряженим, якщо $A^* = A$, чи, іншими
+словами: $\forall x, y \in E (Ax, y) = (x, A y)$.
+
+Властивості самоспряженого оператора.
+
+1. Власні числа самоспряженого оператора --- дійсні.
+
+Доведення.
+$Af = \lambda f$,
+
+$(A f, f) = (\lambda f, f) = \lambda (f, f)$.
+
+$(A f, f) = (f, A f) = (f, \lambda f) = \overline{\lambda}...(f,f) \Rightarrow (\lambda - \overline{\lambda})(f,f) = 0$.
+
+Так, як $(f,f) \neq 0 \Rightarrow \lambda = \overline{\lambda} \Rightarrow \lambda \in R$.
+
+2. Власні вектори, які відповідають різним власним числам самоспряженого
+оператора, ортогональні.
+
+Доведення.
+$A f = \lambda f$, $A g = \mu g$, $\lambda \neq \mu$.
+
+$(Af, g) = (\lambda f, g) = \lambda(f,g)$.
+
+$(A f, g) = (f, A g) = (f, \mu g) = \mu (f,g)$, $\mu \in R$.
+
+Тобто $\lambda(f, g) = \mu(f,g) \Rightarrow (\lambda - \mu)(f, g) = 0 \Rightarrow (f,g) = 0$,
+що і треба було довести (оскільки $\lambda - \mu \neq 0$).
+
+3. Спектральна теорема для самоспряженого оператора (без доведення).
+
+Для будь-якого самоспряженого оператора існує ортонормований базис з
+власних векторів. Матриця оператора в такому базисі набуває діагонального
+вигляду.
+
+$$A = \begin{pmatrix}
+	\lambda_1 & 0         & ...    & 0 \\	
+	0         & \lambda_2 & ...    & 0 \\
+	\vdots    & \vdots    & \ddots & \vdots \\
+	0         & 0         & ...    & \lambda_n \\
+\end{pmatrix}.$$
+
+4. Якщо у просторі $E$ зафіксувати ортонормований базис $\{e_1, e_2, ..., e_n\}$,
+побудувати матрицю самоспряженого оператора $A$, то її коефіцієнти
+$a_{ij} = (A e_j, e_i) = (e_j, A e_i) = \overline{(A e_i, e_j)} = \overline{ji} \Rightarrow A = \overline{A^T}$.
+
+Така матриця називається симетричною за Ермітом.
+
+Частковий випадок.
+
+У дійсному просторі $A = A^T$ --- матриця $A$ --- симетрична.
+
+\subsection*{Унітарний (ортогональний) оператор}
+
+Озн. Лінійний оператор $U$ називається унітарним, якщо $U^* = U^{-1}$ або
+$U U^* = U^* U = I$ --- тотожній оператор.
+
+Твердження. Унітарний оператор зберігає норми і кути.
+Доведення.
+
+$||x||^2 = (x,x) = (x,U^* U x) = (U x, U x) = ||Ux||^2$,
+
+$\cos(\widehat{x,y})
+= \dfrac{(x,y)}{||x|| \cdot ||y||}
+= \dfrac{(x,U^* U y)}{||U x|| \cdot ||U y||}
+= \dfrac{(U x, U y)}{||U x|| \cdot ||U y||}
+= \cos(\widehat{Ux, Uy})$.
+
+Наслідок. $U$ --- унітарний $\Leftrightarrow (x,y) = (U x, U y)$.
+
+Теорема. Оператор $U$ в евклідовому просторі $E$ буде унітарним тоді і
+тільки тоді, коли він ортонормований базис переводить в ортонормований.
+
+Доведення.
+
+Нехай $U$ --- унітарний оператор, $\{e_1, e_2, ..., e_n\}$ --- базис, $(e_i, e_j) = \delta_{ij}$.
+
+$I f_1 = U e_1$, $f_2 = U e_2$, ..., $f_n = U e_n$,
+
+$(f_i, f_j) = (U e_i, U e_j) = (e_i, e_j) = \delta_{ij}$.
+
+Тобто $\{f_1, f_2, ..., f_n\}$ --- ортонормований базис $E$.
+
+У зворотній бік: Нехай деякий оператор $U$ переводить
+ортонормований базис $\{e_1, e_2, ..., e_n\}$ в ортонормований $\{f_1, f_2, ..., f_n\}$.
+
+$f_1 = U e_1$, $f_2 = U e_2$, ..., $f_n = U e_n$ . Треба довести, що $U$ --- унітарний.
+
+Візьмемо два довільні вектори $x$ і $y$. Якщо $x = \sum\limits_{i=1}^n x_i e_i$,
+$y = \sum\limits_{i=1}^n y_i e_i$, то $(x,y) = \sum\limits_{i=1}^n x_i y_i$.
+
+Але $U x = \sum\limits_{i=1}^n x_i U e_i = \sum\limits_{i=1}^n x_i f_i$,
+$U y = \sum\limits_{i=1}^n y_i U e_i = \sum\limits_{k=1}^n y_k f_k$
+
+$(U x, U y)
+= \left( \sum\limits_{i=1}^n x_i f_i, \sum\limits_{k=1}^n y_k f_k \right)
+= \sum\limits_{i=1}^n \sum\limits_{k=1}^n x_i y_k(f_i, f_k)
+= \sum\limits_{i=1}^n x_i y_i$.
+
+Ми отримали: $(x, y) = (U x, U y)$, що і доводить той факт, що $U$ --- унітарний
+оператор. Теорема доведена.
+
+
+Зауважимо, що матриця унітарного оператора $U$ має такі властивості:
+
+$U^* = \overline{U}^T$, $U U^* = I \Rightarrow U^* = U^{-1} \Rightarrow U^{-1} = \overline{U}^T$. 
+
+Якщо $U$ --- дійсна, то $U^{-1} = U^T$.
+
+\section{Зведення рівняння поверхні другого порядку до канонічного вигляду}  % p 55
+
+Загальний вигляд рівняння поверхні другого порядку таке: 
+
+$$a_{11} x^2 + a_{22} y^2 + a_{33} z^2 + 2 a_{12} x y + 2 a_{13} xz + 2 a_{23} yz + b_1 x + b_2 y + b_3 z + c = 0 (*)$$
+
+$$(a_{ij}, b_i, c \in R).$$
+
+Перші шість доданків виразу (*) складають так звану квадратичну форму
+змінних $x$, $y$, $z$. Матриця $A = \begin{pmatrix}
+	a_{11} & a_{12} & a_{13} \\
+	a_{21} & a_{22} & a_{23} \\
+	a_{31} & a_{32} & a_{33} \\
+\end{pmatrix}$ --- матриця квадратичної форми.
+
+Матриця $A$ може розглядатись як матриця деякого самоспряженого
+оператора в просторі $R^3$ в канонічному базисі $\{e_1, e_2, e_3\}$, тому що вона за
+побудовою симетрична: $A = A^T$. Якщо в $R^3$ скалярний добуток --- сума
+добутків координат множників, то базис $\{e_1, e_2, e_3\}$ --- ортонормований.
+
+Пропонуємо самостійно перевірити, що квадратична форма може бути
+записана так: $(A \overline{r}, \overline{r})$, де $\overline{r} = \begin{pmatrix}
+	x \\
+	y \\
+	z \\
+\end{pmatrix}$.
+
+Як відомо, для матриці $A$, можна побудувати базис з ортонормованих
+власних векторів $\{f_1, f_2, f_3\}$, в якому вона набуває діагонального вигляду
+
+$$A = \begin{pmatrix}
+	\lambda_1 & 0 & 0 \\
+	0 & \lambda_1 & 0 \\
+	0 & 0 & \lambda_1 \\
+\end{pmatrix}.$$
+
+Перехід від $\{e_1, e_2, e_3\}$ до $\{f_1, f_2, f_3\}$ відбувається під дією ортогонального
+оператора $U$, матриця якого $U$ в таких базисах, як відомо, має властивість:
+$U^{-1} = U^T$. $А U^T$, в свою чергу, є матрицею оператора $U^*$, оскільки $a_{ij} \in R$.
+
+Тому $A = U \tilde{A} U^{-1} = U \tilde{A} U^* = U \tilde{A} U^T$.
+
+Таким чином: $(A \overline{r}, \overline{r}) = (U \tilde{A} U^T \overline{r}, \overline{r})
+= (\tilde{A} U^T \overline{r}, U^* \overline{r}) = (\tilde{A} U^{-1} \overline{r}, U^{-1} \overline{r})
+= (\tilde{A} \tilde{\overline{r}}, \tilde{\overline{r}}) = \lambda_1 \tilde{x}^2 + \lambda_2 \tilde{y}^2 + \lambda_3 \tilde{z}^2$,
+де $\tilde{\overline{r}} = \begin{pmatrix}
+	\tilde{x} \\
+	\tilde{y} \\
+	\tilde{z} \\
+\end{pmatrix}$ -- координати вектора $\overline{r}$ в новому
+базисі $\{f_1, f_2, f_3\}$.
+
+Лінійна частина виразу (*) може бути перетворена так:
+
+$\overline{b} = \begin{pmatrix}
+	b_1 \\
+	b_2 \\
+	b_3 \\
+\end{pmatrix}$, $b_1 x + b_2 y + b_3 z = (\overline{b}, \overline{r})
+= (U^{-1} \overline{b}, U^{-1} \overline{r}) = (\tilde{\overline{b}},\tilde{\overline{r}})
+= \tilde{b}_1 \tilde{x} + \tilde{b}_2 \tilde{y} + \tilde{b}_3 \tilde{z}$,
+
+$\tilde{\overline{b}} = \begin{pmatrix}
+	\tilde{b_1} \\
+	\tilde{b_2} \\
+	\tilde{b_3} \\
+\end{pmatrix}$ --- координати вектора $\overline{b}$ в базисі $\{f_1, f_2, f_3\}$.
+
+Цей факт випливає з того, що $U^{-1}$ --- також ортогональний оператор.
+
+Вираз (*) набуває вигляду:
+
+$$\lambda_1 \tilde{x}^2 + \lambda_2 \tilde{y}^2 + \lambda_3 \tilde{z}^2
++ \tilde{b}_1 \tilde{x} + \tilde{b}_2 \tilde{y} + \tilde{b}_3 \tilde{z}
++ c = 0 (**).$$
+
+Нам лишається тільки виділити повні квадрати, тобто зробити
+паралельне перенесення, і задача розв’язана.
+
+Зауважимо, що саме ортогональне перетворення дозволило нам від
+виразу (*) перейти до (**). Але, крім цього, поверхня при такому
+перетворенні не поміняла своїх параметрів, бо, як відомо, ортогональне
+перетворення зберігає кути і довжини.
+
+Приклад 1.
+
+Привести рівняння поверхні $z = x y$ до канонічного вигляду.
+
+Розв’язання
+
+Матриця квадратичної форми $x y$: $A = \begin{pmatrix}
+	0 & \dfrac{1}{2} \\
+	\dfrac{1}{2} & 0 \\
+\end{pmatrix}.$
+
+Знайдемо її власні числа: 
+
+$\det(A-\lambda I) = \begin{pmatrix}
+	-\lambda & \dfrac{1}{2} \\
+	\dfrac{1}{2} & -\lambda \\
+\end{pmatrix} = (\lambda^2 - \dfrac{1}{4}) = (\lambda - \dfrac{1}{2})(\lambda + \dfrac{1}{2}) = 0.$
+
+$$\lambda_1 = \dfrac{1}{2}, \lambda_2 = -\dfrac{1}{2}.$$
+
+Тому $\tilde{A} = \begin{pmatrix}
+	\dfrac{1}{2} & 0 \\
+	0 & \dfrac{1}{2} \\
+\end{pmatrix}$, а $z = \dfrac{1}{2} \tilde{x}^2 - \dfrac{1}{2} \tilde{y}^2.$
+
+Тобто дана поверхня --- гіперболічний параболоїд. Для того , щоб знайти, як
+нові змінні $\tilde{x}$, $\tilde{y}$ виражаються через $x$ та $y$ треба знайти ортогональне
+перетворення. Для цього треба знайти власні вектори (вони будуть
+заздалегідь ортогональні, оскільки відповідають різним власним числам) і
+знормувати їх.
+
+$\lambda = \dfrac{1}{2}$
+
+$$\begin{pmatrix}
+	-\dfrac{1}{2} & \dfrac{1}{2} \\
+	\dfrac{1}{2} & -\dfrac{1}{2} \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+\end{pmatrix}, x_1 = x_2, \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+\end{pmatrix} = \begin{pmatrix}
+	x_1 \\
+	x_1 \\
+\end{pmatrix} = x_1 \begin{pmatrix}
+	1 \\
+	1 \\
+\end{pmatrix}, f = \begin{pmatrix}
+	1 \\
+	1 \\
+\end{pmatrix};$$
+
+
+$\lambda = -\dfrac{1}{2}$
+
+$$\begin{pmatrix}
+	\dfrac{1}{2} & \dfrac{1}{2} \\
+	\dfrac{1}{2} & \dfrac{1}{2} \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+\end{pmatrix}, x_1 = -x_2, \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+\end{pmatrix} = \begin{pmatrix}
+	-x_2 \\
+	x_2 \\
+\end{pmatrix} = x_2 \begin{pmatrix}
+	-1 \\
+	1 \\
+\end{pmatrix}, g = \begin{pmatrix}
+	-1 \\
+	1 \\
+\end{pmatrix};$$
+
+$$e_1 = \dfrac{1}{||f||}f = \dfrac{1}{\sqrt{2}} \begin{pmatrix}
+	1 \\
+	1 \\
+\end{pmatrix} = \begin{pmatrix}
+	\dfrac{1}{\sqrt{2}} \\
+	\dfrac{1}{\sqrt{2}} \\
+\end{pmatrix}, e_2 = \dfrac{1}{||g||}g = \dfrac{1}{\sqrt{2}} \begin{pmatrix}
+	-1 \\
+	1 \\
+\end{pmatrix} = \begin{pmatrix}
+	-\dfrac{1}{\sqrt{2}} \\
+	\dfrac{1}{\sqrt{2}} \\
+\end{pmatrix}.$$
+
+Матриця ортогонального оператора $U = \begin{pmatrix}
+	\dfrac{1}{\sqrt{2}} & -\dfrac{1}{\sqrt{2}} \\
+	\dfrac{1}{\sqrt{2}} & \dfrac{1}{\sqrt{2}} \\
+\end{pmatrix}$ --- це матриця повороту
+площини $XOY$ на $45^{\circ}$.
+
+$$\begin{pmatrix}
+	\tilde{x} \\
+	\tilde{y} \\
+\end{pmatrix} = U^{-1} \begin{pmatrix}
+	x \\
+	y \\
+\end{pmatrix} = U^T \begin{pmatrix}
+	x \\
+	y \\
+\end{pmatrix} = \begin{pmatrix}
+	\dfrac{1}{\sqrt{2}} & \dfrac{1}{\sqrt{2}} \\
+	-\dfrac{1}{\sqrt{2}} & \dfrac{1}{\sqrt{2}} \\
+\end{pmatrix} \begin{pmatrix}
+	x \\
+	y \\
+\end{pmatrix}.$$
+
+Тому: $\tilde{x} = \dfrac{1}{\sqrt{2}}(x + y)$, $\tilde{y} = \dfrac{1}{\sqrt{2}}(-x + y)$.
+
+Приклад 2.
+
+Привести до канонічного вигляду рівняння поверхні
+
+$$2x^2 + 5y^2 + 2z^2 - 4xy - 2xz  + 4yz + x - 2y + 5z + \dfrac{1}{2} = 0.$$
+
+Розв’язання
+
+$$A = \begin{pmatrix}
+	 2 & -2 & -1 \\
+	-2 &  5 &  2 \\
+	-1 &  2 &  2 \\
+\end{pmatrix}.$$
+
+$\det(A - \lambda I) = \left| \begin{matrix}
+	2 - \lambda & -2 & -1 \\
+	-2 & 5 - \lambda & 2 \\
+	-1 & 2 & 2 - \lambda \\
+\end{matrix} \right| = \left| \begin{matrix}
+	1 - \lambda & 0 & -1 \\
+	0 & 1 - \lambda & 2 \\
+	1 - \lambda & -2 + 2\lambda & 2 - \lambda \\
+\end{matrix} \right| = (1 - \lambda)^2 \left| \begin{matrix}
+	1 & 0 & -1 \\
+	0 & 1 & 2 \\
+	1 & -2 & 2 - \lambda \\
+\end{matrix} \right|$
+
+$ = (1 - \lambda)^2 \left| \begin{matrix}
+	1 & 0 & -1 \\
+	0 & 1 & 2 \\
+	0 & -2 & 3 - \lambda \\
+\end{matrix} \right| = (1 - \lambda)^2 \left| \begin{matrix}
+	1 & 2 \\
+	-2 & 3 - \lambda \\
+\end{matrix} \right| = (1 - \lambda)^2 (7 - \lambda) = 0.$
+
+$$\lambda_1 = 7, \lambda_{2,3} = 1.$$
+
+Тому квадратична форма нових змінних така: $7\tilde{x}^2 + \tilde{y}^2 + \tilde{z}^2$.
+
+Для того, щоб знайти вираз старих змінних через нові, треба знайти всі
+власні вектори, якщо треба, ортогоналізувати їх і знормувати.
+
+$\lambda = 7$.
+
+$\begin{pmatrix}
+	-5 & -2 & -1 \\
+	-2 & -2 & 2  \\
+	-1 &  2 & -5 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+\end{pmatrix}, \rang(A - 7I) = 2 \Rightarrow \dim \Ker(A - 7I) = 1.$
+
+$$\left\{ \begin{array}{l}
+	x_1 + x_2 = x_3 \\
+	-x_1 + 2x_2 = 5x_3 \\
+\end{array} \right. \Rightarrow 3x_2 = 6x_3 \Rightarrow x_2 = 2x_3,$$
+
+$$x_1 = x_3 - x_2,$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	-x_3 \\
+	2x_2 \\
+	x_3 \\
+\end{pmatrix} = x_3 \begin{pmatrix}
+	-1 \\
+	2 \\
+	1 \\
+\end{pmatrix}.$$
+
+
+Власний вектор $f = \begin{pmatrix}
+	-1 \\
+	2 \\
+	1 \\
+\end{pmatrix}$ для $\lambda = 7$.
+
+$\lambda = 1.$
+
+$$\begin{pmatrix}
+	1 & -2 & -1 \\
+	-2 & 4 & 2  \\
+	-1 &  2 & 1 \\
+\end{pmatrix} \begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	-1 \\
+\end{pmatrix}, \rang(A-I) = 1 \Rightarrow \dim \Ker(A-I) = 3 - 1 = 2.$$
+
+$$x_1 = 2x_2 + x_3,$$
+
+$$\begin{pmatrix}
+	x_1 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = \begin{pmatrix}
+	2x_2 + x_3 \\
+	x_2 \\
+	x_3 \\
+\end{pmatrix} = x_2 \begin{pmatrix}
+	2 \\
+	1 \\
+	0 \\
+\end{pmatrix} + x_3 \begin{pmatrix}
+	1 \\
+	0 \\
+	1 \\
+\end{pmatrix},$$
+
+$$g = \begin{pmatrix}
+	2 \\
+	1 \\
+	0 \\
+\end{pmatrix}, t = \begin{pmatrix}
+	1 \\
+	0 \\
+	1 \\
+\end{pmatrix} \text{ --- власні вектори для } \lambda = 1.$$
+
+$g \perp f$, $t \perp f$ --- оскільки вони відповідають різним власним числам, але
+$(g,t) = 2 \neq 0$.
+
+Проведемо процес ортогоналізації на векторах $g$ і $t$.
+
+$h' = t -\alpha g$, $(h,g) = 0$,
+$(t - \alpha g ,g) = (t,g) - \alpha ||g||^2 = 0 \Rightarrow \alpha = \dfrac{(t,g)}{||g||^2} = \dfrac{2}{5},$
+
+$h' = t - \dfrac{2}{5}g = \dfrac{1}{5}(5t - 2g) = \dfrac{1}{5}\begin{pmatrix}
+	1 \\
+	-2 \\
+	5 \\
+\end{pmatrix};$
+
+$h = \begin{pmatrix}
+	1 \\
+	-2 \\
+	5 \\
+\end{pmatrix}$ --- власний вектор з числом $\lambda = 1$, оскільки він лежить в площині
+векторів $g$ і $t$, $(h,f) = 0$, але тепер $(h, g) = 0$.
+
+$e_1 = \dfrac{1}{||f||}f = \dfrac{1}{\sqrt{6}}\begin{pmatrix}
+	-1 \\
+	2 \\
+	1 \\
+\end{pmatrix}$; $e_2 = \dfrac{1}{||g||}g = \dfrac{1}{\sqrt{5}}\begin{pmatrix}
+	2 \\
+	1 \\
+	0 \\
+\end{pmatrix}$; $e_3 = \dfrac{1}{||h||}h = \dfrac{1}{\sqrt{30}} \begin{pmatrix}
+	1 \\
+	-2 \\
+	5 \\
+\end{pmatrix}$.
+
+Матриця ортогонального перетворення
+
+$U = \begin{pmatrix}
+	-\dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{5}} & \dfrac{1}{\sqrt{30}} \\
+	\dfrac{2}{\sqrt{6}}  & \dfrac{1}{\sqrt{5}} & -\dfrac{2}{\sqrt{30}} \\
+	\dfrac{1}{\sqrt{6}}  & 0                   & \dfrac{5}{\sqrt{30}} \\
+\end{pmatrix}$ --- це матриця повороту в просторі.
+
+Лінійна частина рівняння поверхні: $x - 2y +5z$. Тому $\tilde{b} = \begin{pmatrix}
+	1 \\
+	-2 \\
+	5 \\
+\end{pmatrix}$;
+
+$$\tilde{\overline{b}} = U^{-1} \overline{b} = U^T \overline{b} = \begin{pmatrix}
+	-\dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}}   & \dfrac{1}{\sqrt{6}} \\
+	\dfrac{2}{\sqrt{5}}  & \dfrac{1}{\sqrt{5}}   & 0 \\
+	\dfrac{1}{\sqrt{30}} & -\dfrac{2}{\sqrt{30}} & \dfrac{5}{\sqrt{30}} \\
+\end{pmatrix} \begin{pmatrix}
+	1 \\
+	-2 \\
+	5 \\
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	\sqrt{30} \\
+\end{pmatrix}.$$
+
+Тому $x - 2y + 5z = \sqrt{30}\tilde{z}$.
+
+Рівняння поверхні в нових координатах: $7\tilde{x}^2 + \tilde{y}^2 + \tilde{z}^2 + \sqrt{30} \tilde{z} + \dfrac{1}{2} = 0$.
+
+Виділимо повний квадрат: $7\tilde{x}^2 + \tilde{y}^2 + \left( \tilde{z} + \dfrac{\sqrt{30}}{2} \right) = 7$.
+
+Перепозначимо $\tilde{\tilde{z}} = \tilde{z} + \dfrac{\sqrt{30}}{2}$ (це і є паралельне перенесення): 
+
+$7\tilde{x}^2 + \tilde{y}^2 + \tilde{\tilde{z}}^2
+= 7 \Rightarrow \tilde{x}^2 + \dfrac{\tilde{y}^2}{7} + \dfrac{\tilde{\tilde{z}}^2}{7} = 1$
+--- це еліпсоїд з півосями $a = 1$, $b = c = \sqrt{7}$.
+
+
