@@ -130,19 +130,18 @@ $$\left\{\begin{array}{l}
 Приклад: Лемніската Бернуллі $(x^2 + y^2)^2 = a^2(x^2 - y^2), a > 0$.
 
 \parbox{140px}{\begin{tikzpicture}[scale=0.5]
-  	\begin{polaraxis}[style=black!10,grid style=black!10,ticklabel style=black!50,xticklabel=$\pgfmathprintnumber{\tick}^\circ$    ]
-    		\addplot [name path=A,thick, blue, domain=0:45, samples=50] {2*sqrt(cos(2*x))};
-   	 	\addplot [thick, red, domain=-45:0, samples=50] {2*sqrt(cos(2*x))};
-   	 	\addplot [thick, red, domain=135:225, samples=100] {2*sqrt(cos(2*x))};
-    		\draw [name path=B,blue,thick,opacity=.5,dotted] (0:0) -- (0:201);
-    		\tikzfillbetween[on layer=bg,of=A and B]{gray!50}
-  	\end{polaraxis}
+  	\begin{polaraxis}[style=black!10, ticklabel style=black, xticklabel=$\pgfmathprintnumber{\tick}^\circ$]
+    	\addplot [thick, black, domain=0:45, samples=50] {2*sqrt(cos(2*x))};
+   	 	\addplot [thick, black, domain=-45:0, samples=50] {2*sqrt(cos(2*x))};
+   	 	\addplot [thick, black, domain=135:225, samples=100] {2*sqrt(cos(2*x))};
+    \end{polaraxis}
 \end{tikzpicture}}
 \parbox{7.2cm}{З формул випливає, що
-$\rho^4 = a^2\rho^2(\cos^2 \varphi - \sin^2 \varphi)$, тобто
-$\rho^2 = a\cos 2 \varphi$ або $\rho = \sqrt{a\cos 2 \varphi}$.
-Область визначення: $\cos 2\varphi \geqslant0$,
-тобто $\varphi \in \left[-\dfrac{\pi}{4}, \dfrac{\pi}{4}\right] \cup \left[\dfrac{3\pi}{4}, \dfrac{5\pi}{4}\right]$.}
+	$\rho^4 = a^2\rho^2(\cos^2 \varphi - \sin^2 \varphi)$, тобто
+	$\rho^2 = a\cos 2 \varphi$ або $\rho = \sqrt{a\cos 2 \varphi}$.
+	Область визначення: $\cos 2\varphi \geqslant0$,
+	тобто $\varphi \in \left[-\dfrac{\pi}{4}, \dfrac{\pi}{4}\right] \cup \left[\dfrac{3\pi}{4}, \dfrac{5\pi}{4}\right]$.
+}
 
 \section{Пряма на площині}
 
@@ -170,10 +169,8 @@ $\rho^2 = a\cos 2 \varphi$ або $\rho = \sqrt{a\cos 2 \varphi}$.
 перпендикулярним вектору $\overline{n}$: $\overline{M_0 M} \perp \overline{n}$, тобто $(\overline{M_0 M}, \overline{n}) = 0$. Отримали:
 $A(x-x_0) + B(y-y_0) = 0$ --- рівняння прямої через точку $M_0(x_0, y_0)$ та нормальний вектор $\overline{n}(A, B)$.
 
-Побудуємо загальне рівняння прямої. Розкривши дужки, маємо
-$Ax + By - (Ax_0 + By_0) = 0$,
-де $А$ і $B \neq 0$  одночасно. Позначивши $C = -(Ax_0 + By_0)$, отримуємо
-$Ax + By + C = 0$ --- \textbf{загальний вигляд прямої}.  
+Побудуємо загальне рівняння прямої. Розкривши дужки, маємо $Ax + By - (Ax_0 + By_0) = 0$, де $A$ і $B \neq 0$
+одночасно. Позначивши $C = -(Ax_0 + By_0)$, отримуємо $Ax + By + C = 0$ --- \textbf{загальний вигляд прямої}.  
 
 \section{Неповні рівняння прямої}
 
@@ -330,7 +327,7 @@ $$\begin{array}{l}
 
 $$\tg(\widehat{L_1,L_2}) = \tg(\alpha_2 - \alpha_1) = \left|\dfrac{\tg\alpha_2 - \tg\alpha_1}{1+\tg\alpha_1\tg\alpha_2}\right| = \dfrac{k_2 - k_1}{1+k_1k_2}$$
 
-\section{Умови перпендикулярності і паралельності прямих}
+\parbox{\textwidth - 0.6cm}{\section{Умови перпендикулярності і паралельності прямих}}
 
 Паралельність або перпендикулярність двох прямих рівнозначна
 паралельності або перпендикулярності нормальних або напрямних векторів. Тому
@@ -367,7 +364,7 @@ b) умови перпендикулярності $L_1 \perp L_2$:
 нормального вектора $\overline{n}$: $\overline{n}_0 = (\cos\alpha,\cos\beta) = (\cos\alpha,\sin\alpha)$. При
 цьому враховано, що $\alpha + \beta = \frac{pi}{2}$.
 
-\parbox{110px}{\begin{tikzpicture}[scale=0.5]
+\noindent\parbox{3.7cm}{\begin{tikzpicture}[scale=0.5]
 	\draw[->] (0,0) -- (5,0) node[right] {$x$};
 	\draw[->] (0,0) -- (0,5) node[above] {$y$};
 	\draw (-0.5,-0.5) node{$O$};			
@@ -385,15 +382,15 @@ b) умови перпендикулярності $L_1 \perp L_2$:
 	\draw (0,0) -- (3,1) node[above right] {M};
 	\filldraw[black] (3,1) circle (3pt);
 \end{tikzpicture}}
-\parbox{8.2cm}{
+\parbox{\textwidth - 3.8cm}{
 	Мають місце наступні співвідношення:
 
-	$p = |OP|$
-	$= \text{пр}_{\overline{n}}\overline{OM} = \text{пр}_{\overline{n}_0}\overline{OM}$
-	$= |OM|\cos(\widehat{\overline{n}_0,OM})$
-	$= |OM|\dfrac{(\overline{n}_0,\overline{OM})}{|\overline{n}_0||\overline{OM}|}$
-	$= \dfrac{(\overline{n}_0,\overline{OM})}{|\overline{n}_0|}$
-	$= x\cos\alpha + y\sin\alpha$
+	$p = |OP|
+	= \text{пр}_{\overline{n}}\overline{OM} = \text{пр}_{\overline{n}_0}\overline{OM}
+	= |OM|\cos(\widehat{\overline{n}_0,OM})
+	= |OM|\dfrac{(\overline{n}_0,\overline{OM})}{|\overline{n}_0||\overline{OM}|}
+	= \dfrac{(\overline{n}_0,\overline{OM})}{|\overline{n}_0|}
+	= x\cos\alpha + y\sin\alpha$.
 	
 	Отримали рівняння
 	$s\cos\alpha + y\sin\alpha = 0$,	
@@ -401,7 +398,7 @@ b) умови перпендикулярності $L_1 \perp L_2$:
 	координат до прямої $L$.
 }
 
-\section{Зведення загального рівняння прямої до нормального вигляду}
+\parbox{\textwidth - 0.6cm}{\section{Зведення загального рівняння прямої до нормального вигляду}}
 
 Розглянемо загальне рівняння прямої $L: Ax + By + C= 0$, та нормальне
 рівняння цієї прямої: $x\cos\alpha + y\sin\alpha - p = 0$.
@@ -497,7 +494,7 @@ $$D = \dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$.
 		L_1: \dfrac{1}{\sqrt{17}}(4x + y - 4) = 0; & \overline{n}_2^0 = \dfrac{1}{\sqrt{17}}(4,1);  \\
 	\end{array}$$
 	
-	\parbox{130px}{\begin{tikzpicture}[scale=0.5]
+	\noindent\parbox{4.5cm}{\begin{tikzpicture}[scale=0.5]
 		\draw[->] (-4,0) -- (4,0) node[above] {$x$};
 		\draw[->] (0,-1) -- (0,5) node[right] {$y$};
 		\draw (0,0) node[below right]{O};
@@ -508,7 +505,7 @@ $$D = \dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$.
 		\draw[-stealth, thick] (0,0) -- (1.75,1.75) node[above right] {B};
 		\filldraw (0.5,3.25) circle (3pt) node[right]{C};
 	\end{tikzpicture}}
-	\parbox{7.6cm}{
+	\parbox{\textwidth - 4.6cm}{
 		Оскільки скалярний добуток
 		$(\overline{n}_1^0,\overline{n}_2^0) = \frac{1}{\sqrt{5}\sqrt{17}}(-8+1) < 0$, то кут $AOB$
 		між векторами $\overline{n}_1^0$ та $\overline{n}_2^0$ --- тупий. У
@@ -521,7 +518,7 @@ $$D = \dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$.
 	
 	Знайдемо відхилення точки $M_0(-2,2)$ від даних прямих.
 	
-	\parbox{80px}{\begin{tikzpicture}[scale=0.5]
+	\noindent\parbox{2.4cm}{\begin{tikzpicture}[scale=0.5]
 		\draw (-2,3) -- (2,-3);
 		\draw (-2,-3) -- (2,3);
 				
@@ -548,7 +545,7 @@ $$D = \dfrac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$.
 		\filldraw (1,0) circle (2pt) node[right]{M$_0$};
 		\filldraw (-0.5,-2) circle (2pt) node[right]{O};
 	\end{tikzpicture}}
-	\parbox{9.3cm}{
+	\parbox{\textwidth - 2.5cm}{
 		$\delta_{M_0,L_1} = -\dfrac{1}{\sqrt{5}}(-4 -2 +2) = \dfrac{4}{\sqrt{5}} > 0;$
 	
 		$\delta_{M_0,L_2} = \dfrac{1}{\sqrt{17}}(-8 +2 -4) = -\dfrac{10}{\sqrt{17}} < 0;$

@@ -46,10 +46,10 @@
 \usepackage{enumitem}                   % for beautiful enumeration
 \usepackage{tikz}                       % for beautiful vector images
 %\usepackage{tkz-fct}  					% for function ploting
-%\usepackage{pgfplots}					% for function ploting
-%\pgfplotsset{compat = newest}			% use last version of {pgfplots}
-%\usepgfplotslibrary{polar}				% for polar system
-%\usepgfplotslibrary{fillbetween}
+\usepackage{pgfplots}					% for function ploting
+\pgfplotsset{compat = newest}			% use last version of {pgfplots}
+\usepgfplotslibrary{polar}				% for polar system
+\usepgfplotslibrary{fillbetween}
 \usepackage{wrapfig} 					% for wrapping the text
 \usepackage{calc}						% for using 
 
