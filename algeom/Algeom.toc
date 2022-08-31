@@ -13,3 +13,7 @@
 \contentsline {section}{\numberline {1.11}Векторний добуток в координатах}{11}%
 \contentsline {section}{\numberline {1.12}Мішаний добуток трьох векторів}{12}%
 \contentsline {section}{\numberline {1.13}Мішаний добуток в координатах}{13}%
+\contentsline {chapter}{\numberline {2}Визначники і лінійна залежність}{14}%
+\contentsline {section}{\numberline {2.1}Визначники другого і третього порядків}{14}%
+\contentsline {section}{\numberline {2.2}Властивості визначників}{15}%
+\contentsline {section}{\numberline {2.3}Лінійна залежність векторів}{17}%
