@@ -42,17 +42,19 @@
 \usepackage{amssymb}                    % for math
 \usepackage{amsthm}                     % for math
 %\usepackage{biblatex}                   % for bibliografy
-%\usepackage{hyperref}                   % for table of contents with references
 \usepackage{enumitem}                   % for beautiful enumeration
 \usepackage{tikz}                       % for beautiful vector images
 %\usepackage{tkz-fct}  					% for function ploting
-%\usepackage{pgfplots}					% for function ploting
-%\pgfplotsset{compat = newest}			% use last version of {pgfplots}
-%\usepgfplotslibrary{polar}				% for polar system
-%\usepgfplotslibrary{fillbetween}
+\usepackage{pgfplots}					% for function ploting
+\pgfplotsset{compat = newest}			% use last version of {pgfplots}
+\usepgfplotslibrary{polar}				% for polar system
+\usepgfplotslibrary{fillbetween}
 \usepackage{wrapfig} 					% for wrapping the text
 \usepackage{calc}						% for using 
-
+\usepackage[hidelinks]{hyperref}                   % for table of contents with references
+\hypersetup{
+	unicode=true,             % non-Latin characters in Acrobat’s bookmarks
+}
 
 % *********************************************************
 % 						Theorem styles
@@ -66,9 +68,8 @@
 \newtheorem{algorithm}{\indent Алгоритм}[chapter] 	 				% Оточення алгоритму
 \newtheorem{problem}{\indent Задача}[chapter]  						% Оточення задачі
 \newtheorem{example}{\indent Приклад}[chapter]  					% Оточення прикладу
-\newtheorem*{remark}{\indent Зауваження}
-%\theoremstyle{solution}
-\newtheorem*{solution}{\indent \normalfont \textit{Розв'язання}}
+\newtheorem*{remark}{\indent Зауваження}							% Оточення зауваження
+\newtheorem*{solution}{\indent \normalfont \textit{Розв'язання}}	% Оточення розвязку
 \newtheorem{corollary}{\indent Наслідок}[theorem]							% Оточення наслідку
 
 
