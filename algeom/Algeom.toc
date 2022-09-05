@@ -31,3 +31,9 @@
 \contentsline {section}{\numberline {3.11}Зведення загального рівняння прямої до нормального вигляду}{28}{section.3.11}%
 \contentsline {section}{\numberline {3.12}Відхилення і відстань від точки до прямої}{29}{section.3.12}%
 \contentsline {section}{\numberline {3.13}Рівняння пучка (низки) прямих}{30}{section.3.13}%
+\contentsline {chapter}{\numberline {4}Криві другого порядку}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Канонічне рівняння еліпса}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Канонічне рівняння гіперболи}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Канонічне рівняння параболи}{36}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ексцентриситет і директриси еліпса і гіперболи}{37}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Рівняння дотичної до кривої другого порядку}{39}{section.4.5}%

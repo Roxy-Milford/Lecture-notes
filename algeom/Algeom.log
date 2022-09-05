@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.28)  4 SEP 2022 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.28)  5 SEP 2022 12:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -876,29 +876,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 3.
 [21
 
-] [22] [23] [24] [25] [26] [27] [28] [29] [30]) [31]
+] [22] [23] [24] [25] [26] [27] [28] [29] [30]) (/home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_04.tex [31]
+{\cyrillictext \CYRR \cyro \cyrz \cyrd \cyrii \cyrl } 4.
+[32
+
+] [33] [34]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [35] [36] [37]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [38] [39]) [40]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
  (/home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
 Package rerunfilecheck Info: File `Algeom.out' has not changed.
-(rerunfilecheck)             Checksum: 624E37D5C12D1AB6FA9148A3F7B3FFB4;9804.
+(rerunfilecheck)             Checksum: 1F4347D43F1B84C2AB99A0E32592B595;11643.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 33790 strings out of 481239
- 766004 string characters out of 5920377
- 1133560 words of memory out of 5000000
- 48306 multiletter control sequences out of 15000+600000
+ 34024 strings out of 481239
+ 770644 string characters out of 5920377
+ 1134564 words of memory out of 5000000
+ 48515 multiletter control sequences out of 15000+600000
  551029 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,15n,140p,839b,2140s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on "/home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.pdf" (31 pages, 407796 bytes).
+Output written on "/home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.pdf" (40 pages, 446220 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 494 compressed objects within 5 object streams
- 180 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 637 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

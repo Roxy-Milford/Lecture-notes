@@ -364,6 +364,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_04.tex
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_04.tex
 INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux
 INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
 INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
