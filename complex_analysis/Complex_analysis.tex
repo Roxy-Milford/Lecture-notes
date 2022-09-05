@@ -1,0 +1,49 @@
+\documentclass{book}  % might be replaced with "../simple_book"
+
+\input{packages}  % Додаткові пакети вносіть у цей файл
+\input{redefinitions}  % Додаткові визначення та перевизначення команд вносіть у цей файл
+
+\frenchspacing  % for usual spasing
+
+\begin{document}
+
+\setfontsize{12}
+
+
+%%%%%%%%%%%%%%%%%%%%% Титульна сторінка %%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\input{complex_analysis/title}
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Зміст %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{1}    %!!! -- продумати, як автоматизувати номер сторінки
+\begingroup
+\let\cleardoublepage\relax
+\let\clearpage\relax
+\tableofcontents
+\endgroup
+
+%%% \cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%% Основна частина %%%%%%%%%%%%%%%%%%%%%
+\input{complex_analysis/complex_analysis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Висновки %%%%%%%%%%%%%%%%%%%%%%%%
+%%% \conclusions
+%%% \input{conclusions}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Бібліографія %%%%%%%%%%%%%%%%%%%%%%%
+%%% \begin{thebibliography}
+%%% \input{bibliography} 
+%%% \end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Додатки %%%%%%%%%%%%%%%%%%%%%%%%%
+%%% \input{appendix}
+
+
+
+\end{document}

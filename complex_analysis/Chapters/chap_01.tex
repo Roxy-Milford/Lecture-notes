@@ -1,0 +1,226 @@
+\chapter{Комплексні числа і числа комплексної змінної}
+
+\section{Комплексні числа. основні визначення}
+
+\textbf{Уявна одиниця} --- це спеціальне число в математиці з незвичайними властивостями.
+
+Властивість уявної одиниці $i^2 = -1$.
+
+Якщо ми маємо щось схоже на $\dfrac{x}{iy}$, то, $\dfrac{x}{iy} = - \dfrac{ix}{y}$.
+
+\textbf{Комплексне число (уявне число)} --- це число виду $z = x + iy; x, y \in \mathbb{R}$,
+а число $i$ --- це уявна одиниця.
+
+\textbf{Множина комплексних чисел $\mathbb{C}$} -- множина усіх дійсних чисел та комплексних чисел.
+
+\textbf{Спряжене число} до комплексного числа --- це $\bar z = x - iy$.
+
+\textbf{Дійсна частина} комплексного числа $z = x + iy$ --- це $\re(z) = x$.
+
+$\re z = \dfrac{z + \bar{z}}{2}$.
+
+\textbf{Уявна частина} комплексного числа $z = x + iy$ --- це $\im(z) = y$.
+
+$\im z = \dfrac{z - \bar{z}}{2i}$.
+
+Комплексне число можна подати як вектор.
+В Декартовій системі координат дійсна частина зображається на осі $Ox$, а уявна на осі $Oy$, при чому за одиницю на уявній осі, ми беремо число $i$.
+В полярній системі координат все те ж саме, але вектор ми подаємо не як дійсна  та уявна частина, $x$ та $y$, а як довжина вектора $\rho$ і кут його повороту $\phi$, відносно додатнього напрямку осі $Ox$.
+
+Нехай $x, y, \rho, \phi \in \mathbb{R}$, тоді:
+
+\textbf{Алгебраїчна форма} комплексного числа --- $z = x + iy$.
+
+\textbf{Показникова форма} комплексного числа --- $z = |z|e^{i \phi}$.
+
+\textbf{Тригонометрична форма} комплексного числа --- $z = |z| (\cos \phi + i \sin \phi)$.
+
+\textbf{Модуль} комплексного числа --- $|z| = \rho = \sqrt{x^2 + y^2}$.
+
+\textbf{Формула Ейлера(Ойлера)} --- $s^{i \phi} = \cos \phi + i \sin \phi$.
+
+Аргумент комплексного числа --- кут $\phi$.
+
+$\Arg z$ --- множина значень аргумента $z$.
+
+$\Arg z =  \arg z + 2 \pi k, k \in \mathbb{Z}$.
+
+Головне значення аргумента комплексного числа ---$\arg z =  \phi$, $\phi \in ( - \pi; \pi ]$.
+
+$$\text{arg}z = \left\{ \begin{array}{lcr}
+\arctan{\frac{y}{x}},       & x>0,      & (1, 4 \text{ чверті}) \\
+\arctan{\frac{y}{x}} + \pi, & x<0, y>0, & (2 \text{ чверть}) \\
+\arctan{\frac{y}{x}} - \pi, & x<0, y<0, & (3 \text{ чверть})
+\end{array}\right. $$
+
+$\arg z$ визначений для $z \neq 0$, а для випадків коли $x$ чи $y$ рівні 0, дивишся куди направлений вектор вручну.
+
+\underline{Корінь комплексного числа} -- $\sqrt[n]{z} = \sqrt[n]{|z|}(\cos\dfrac{\phi+2\pi k}{n} + i\sin\dfrac{\phi+2\pi k}{n}), k=0,1,...,n-1$.
+
+
+
+\section{Послідовності комплексних чисел}
+
+\textbf{Послідовність комплексних чисел} -- це комплекснозначна функція натурального аргумента $f(n) = z_n, n\in\mathbb{N}, z_n\in\mathbb{C}$.
+
+$\{z_n\}$ -- послідовність.
+
+\textbf{Ліміт послідовності комплексних чисел}:
+
+$\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow \forall\varepsilon > 0 ~ \exists N = N ( \varepsilon ) \in\mathbb{N} : \forall n \geqslant N(\varepsilon) ~ |z_n-z_0|<\varepsilon$.
+
+$\{z_n\}$ -- \textbf{обмежена}, якщо 
+
+$\exists M>0 ~ \forall n \in \mathbb{N} ~ |z_n|<M$.
+
+\begin{theorem}
+$$
+\text{Нехай: } \begin{array}{l}
+z_n=x_n+iy_n; \\
+z_0=x_0+iy_0;
+\end{array}, 
+(x_n,y_n,x_0,y_0 \in \mathbb{R})
+$$
+
+$$
+\text{Тоді: }\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow 
+\left\{ \begin{array}{l}
+\lim\limits_{n\rightarrow\infty} x_n = x_0 \\
+\lim\limits_{n\rightarrow\infty} y_n = y_0
+\end{array}\right.
+$$
+\end{theorem}
+\begin{proof}
+Очевидно.
+\end{proof}
+
+\begin{claim}
+$\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow \lim\limits_{n\rightarrow\infty} |z_n-z_0| = 0$
+\end{claim}
+
+\begin{theorem}
+Якщо $\lim\limits_{n\rightarrow\infty} z_n = z_0$, то $\lim\limits_{n\rightarrow\infty} |z_n| = |z_0|$
+\end{theorem}
+
+\begin{theorem}
+$$ 
+\left\{ \begin{array}{l}
+\lim\limits_{n\rightarrow\infty} |z_n| = |z_0| \\
+\lim\limits_{n\rightarrow\infty} \varphi_n = \varphi_0
+\end{array}\right.
+\Rightarrow \lim\limits_{n\rightarrow\infty} z_n = z_0
+$$
+\end{theorem}
+
+
+\section{Комплексні числа. основні визначення}
+
+\textbf{Уявна одиниця} --- це спеціальне число в математиці з незвичайними властивостями.
+
+Властивість уявної одиниці $i^2 = -1$.
+
+Якщо ми маємо щось схоже на $\dfrac{x}{iy}$, то, $\dfrac{x}{iy} = - \dfrac{ix}{y}$.
+
+\textbf{Комплексне число (уявне число)} --- це число виду $z = x + iy; x, y \in \mathbb{R}$,
+а число $i$ --- це уявна одиниця.
+
+\textbf{Множина комплексних чисел $\mathbb{C}$} -- множина усіх дійсних чисел та комплексних чисел.
+
+\textbf{Спряжене число} до комплексного числа --- це $\bar z = x - iy$.
+
+\textbf{Дійсна частина} комплексного числа $z = x + iy$ --- це $\re(z) = x$.
+
+$\re z = \dfrac{z + \bar{z}}{2}$.
+
+\textbf{Уявна частина} комплексного числа $z = x + iy$ --- це $\im(z) = y$.
+
+$\im z = \dfrac{z - \bar{z}}{2i}$.
+
+Комплексне число можна подати як вектор.
+В Декартовій системі координат дійсна частина зображається на осі $Ox$, а уявна на осі $Oy$, при чому за одиницю на уявній осі, ми беремо число $i$.
+В полярній системі координат все те ж саме, але вектор ми подаємо не як дійсна  та уявна частина, $x$ та $y$, а як довжина вектора $\rho$ і кут його повороту $\phi$, відносно додатнього напрямку осі $Ox$.
+
+Нехай $x, y, \rho, \phi \in \mathbb{R}$, тоді:
+
+\textbf{Алгебраїчна форма} комплексного числа --- $z = x + iy$.
+
+\textbf{Показникова форма} комплексного числа --- $z = |z|e^{i \phi}$.
+
+\textbf{Тригонометрична форма} комплексного числа --- $z = |z| (\cos \phi + i \sin \phi)$.
+
+\textbf{Модуль} комплексного числа --- $|z| = \rho = \sqrt{x^2 + y^2}$.
+
+\textbf{Формула Ейлера(Ойлера)} --- $s^{i \phi} = \cos \phi + i \sin \phi$.
+
+Аргумент комплексного числа --- кут $\phi$.
+
+$\Arg z$ --- множина значень аргумента $z$.
+
+$\Arg z =  \arg z + 2 \pi k, k \in \mathbb{Z}$.
+
+Головне значення аргумента комплексного числа ---$\arg z =  \phi$, $\phi \in ( - \pi; \pi ]$.
+
+$$\text{arg}z = \left\{ \begin{array}{lcr}
+\arctan{\frac{y}{x}},       & x>0,      & (1, 4 \text{ чверті}) \\
+\arctan{\frac{y}{x}} + \pi, & x<0, y>0, & (2 \text{ чверть}) \\
+\arctan{\frac{y}{x}} - \pi, & x<0, y<0, & (3 \text{ чверть})
+\end{array}\right. $$
+
+$\arg z$ визначений для $z \neq 0$, а для випадків коли $x$ чи $y$ рівні 0, дивишся куди направлений вектор вручну.
+
+\underline{Корінь комплексного числа} -- $\sqrt[n]{z} = \sqrt[n]{|z|}(\cos\dfrac{\phi+2\pi k}{n} + i\sin\dfrac{\phi+2\pi k}{n}), k=0,1,...,n-1$.
+
+
+
+\section{Послідовності комплексних чисел}
+
+\textbf{Послідовність комплексних чисел} -- це комплекснозначна функція натурального аргумента $f(n) = z_n, n\in\mathbb{N}, z_n\in\mathbb{C}$.
+
+$\{z_n\}$ -- послідовність.
+
+\textbf{Ліміт послідовності комплексних чисел}:
+
+$\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow \forall\varepsilon > 0 ~ \exists N = N ( \varepsilon ) \in\mathbb{N} : \forall n \geqslant N(\varepsilon) ~ |z_n-z_0|<\varepsilon$.
+
+$\{z_n\}$ -- \textbf{обмежена}, якщо 
+
+$\exists M>0 ~ \forall n \in \mathbb{N} ~ |z_n|<M$.
+
+\begin{theorem}
+$$
+\text{Нехай: } \begin{array}{l}
+z_n=x_n+iy_n; \\
+z_0=x_0+iy_0;
+\end{array}, 
+(x_n,y_n,x_0,y_0 \in \mathbb{R})
+$$
+
+$$
+\text{Тоді: }\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow 
+\left\{ \begin{array}{l}
+\lim\limits_{n\rightarrow\infty} x_n = x_0 \\
+\lim\limits_{n\rightarrow\infty} y_n = y_0
+\end{array}\right.
+$$
+\end{theorem}
+\begin{proof}
+Очевидно.
+\end{proof}
+
+\begin{claim}
+$\lim\limits_{n\rightarrow\infty} z_n = z_0 \Leftrightarrow \lim\limits_{n\rightarrow\infty} |z_n-z_0| = 0$
+\end{claim}
+
+\begin{theorem}
+Якщо $\lim\limits_{n\rightarrow\infty} z_n = z_0$, то $\lim\limits_{n\rightarrow\infty} |z_n| = |z_0|$
+\end{theorem}
+
+\begin{theorem}
+$$ 
+\left\{ \begin{array}{l}
+\lim\limits_{n\rightarrow\infty} |z_n| = |z_0| \\
+\lim\limits_{n\rightarrow\infty} \varphi_n = \varphi_0
+\end{array}\right.
+\Rightarrow \lim\limits_{n\rightarrow\infty} z_n = z_0
+$$
+\end{theorem}
