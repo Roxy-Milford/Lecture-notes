@@ -37,3 +37,6 @@
 \contentsline {section}{\numberline {4.3}Канонічне рівняння параболи}{36}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Ексцентриситет і директриси еліпса і гіперболи}{37}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Рівняння дотичної до кривої другого порядку}{39}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Комплексні числа}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Комплексні числа}{41}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Тригонометрична форма комплексного числа}{43}{section.5.2}%
