@@ -20,13 +20,13 @@
 % 						Page configuration
 % *********************************************************
 % \RequirePackage[includehead, headsep=0pt, footskip=0pt, top=2cm, bottom=2cm, left=2.5cm, right=1.5cm]{geometry}
-%\usepackage{geometry}
-%\geometry{
-%	a5paper,  % a5: (148 x 210), a4: (21.0 x 29.7)
-%	total={128mm,170mm},
-%	left=10mm,
-%	top=20mm,
-%}
+\usepackage{geometry}
+\geometry{
+	a5paper,  % a5: (148 x 210), a4: (21.0 x 29.7)
+	total={128mm,170mm},
+	left=10mm,
+	top=20mm,
+}
 
 \frenchspacing  % for usual spasing
 \raggedbottom % to disable extra spaces at the last page of chapter

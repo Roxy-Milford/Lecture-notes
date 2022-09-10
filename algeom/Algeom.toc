@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {1.9}Нормування вектора}{10}{section.1.9}%
 \contentsline {section}{\numberline {1.10}Векторний добуток двох векторів}{11}{section.1.10}%
 \contentsline {section}{\numberline {1.11}Векторний добуток в координатах}{12}{section.1.11}%
-\contentsline {section}{\numberline {1.12}Мішаний добуток трьох векторів}{13}{section.1.12}%
+\contentsline {section}{\numberline {1.12}Мішаний добуток трьох векторів}{12}{section.1.12}%
 \contentsline {section}{\numberline {1.13}Мішаний добуток в координатах}{14}{section.1.13}%
 \contentsline {chapter}{\numberline {2}Визначники і лінійна залежність}{15}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Визначники другого і третього порядків}{15}{section.2.1}%
@@ -20,23 +20,23 @@
 \contentsline {chapter}{\numberline {3}Пряма на площині}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Різні способи задання ліній на площині}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Пряма на площині}{23}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Неповні рівняння прямої}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Неповні рівняння прямої}{23}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Рівняння прямої у відрізках}{24}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Канонічне рівняння}{24}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Параметричне рівняння прямої}{25}{section.3.6}%
 \contentsline {section}{\numberline {3.7}Рівняння прямої з кутовим коефіцієнтом}{25}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Кут між двома прямими}{26}{section.3.8}%
+\contentsline {section}{\numberline {3.8}Кут між двома прямими}{25}{section.3.8}%
 \contentsline {section}{\numberline {3.9}Умови перпендикулярності і паралельності прямих}{27}{section.3.9}%
 \contentsline {section}{\numberline {3.10}Нормальне рівняння прямої}{27}{section.3.10}%
 \contentsline {section}{\numberline {3.11}Зведення загального рівняння прямої до нормального вигляду}{28}{section.3.11}%
-\contentsline {section}{\numberline {3.12}Відхилення і відстань від точки до прямої}{29}{section.3.12}%
+\contentsline {section}{\numberline {3.12}Відхилення і відстань від точки до прямої}{28}{section.3.12}%
 \contentsline {section}{\numberline {3.13}Рівняння пучка (низки) прямих}{30}{section.3.13}%
-\contentsline {chapter}{\numberline {4}Криві другого порядку}{32}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Канонічне рівняння еліпса}{32}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Канонічне рівняння гіперболи}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Канонічне рівняння параболи}{36}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Ексцентриситет і директриси еліпса і гіперболи}{37}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Рівняння дотичної до кривої другого порядку}{39}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Комплексні числа}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Комплексні числа}{41}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Тригонометрична форма комплексного числа}{43}{section.5.2}%
+\contentsline {chapter}{\numberline {4}Криві другого порядку}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Канонічне рівняння еліпса}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Канонічне рівняння гіперболи}{33}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Канонічне рівняння параболи}{34}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Ексцентриситет і директриси еліпса і гіперболи}{35}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Рівняння дотичної до кривої другого порядку}{37}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Комплексні числа}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Комплексні числа}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Тригонометрична форма комплексного числа}{41}{section.5.2}%

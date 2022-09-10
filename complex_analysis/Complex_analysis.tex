@@ -1,18 +1,13 @@
-\documentclass{book}  % might be replaced with "../simple_book"
-
-\input{packages}  % Додаткові пакети вносіть у цей файл
-\input{redefinitions}  % Додаткові визначення та перевизначення команд вносіть у цей файл
+\documentclass{ext_book}  % might be replaced with "../simple_book"
 
 \frenchspacing  % for usual spasing
 
 \begin{document}
 
-\setfontsize{12}
-
 
 %%%%%%%%%%%%%%%%%%%%% Титульна сторінка %%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
-\input{complex_analysis/title}
+\input{title}
 \end{titlepage}
 
 
@@ -27,7 +22,7 @@
 %%% \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%% Основна частина %%%%%%%%%%%%%%%%%%%%%
-\input{complex_analysis/complex_analysis}
+\input{Chapters/chap_01}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Висновки %%%%%%%%%%%%%%%%%%%%%%%%
