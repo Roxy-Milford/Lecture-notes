@@ -6,14 +6,14 @@
 % *********************************************************
 % 					Ідентифікуємо клас
 % *********************************************************
-\ProvidesClass{ext_book}[2022/08/31 v2.0 Книга по лекційним записам]
+\ProvidesClass{ext_book}[2022/08/31 v2.1 Книга по лекційним записам (матан)]
 \NeedsTeXFormat{LaTeX2e} % потрібний формат який був там, звідки я все скатав
 
 
 % *********************************************************
 % 				Завантажуємо "батьківський клас"
 % *********************************************************
-\LoadClass[draft, 10pt]{report}
+\LoadClass[draft, 12pt]{report}
 
 
 % *********************************************************
@@ -22,9 +22,9 @@
 % \RequirePackage[includehead, headsep=0pt, footskip=0pt, top=2cm, bottom=2cm, left=2.5cm, right=1.5cm]{geometry}
 \usepackage{geometry}
 \geometry{
-	a5paper,  % a5: (148 x 210), a4: (21.0 x 29.7)
-	total={128mm,170mm},
-	left=10mm,
+	a4paper,  % a5: (148 x 210), a4: (21.0 x 29.7)
+	total={160mm,257mm},
+	left=25mm,
 	top=20mm,
 }
 
@@ -55,6 +55,7 @@
 \hypersetup{
 	unicode=true,             % non-Latin characters in Acrobat’s bookmarks
 }
+\usepackage{mathtools}        % for text over \mapsto, to use write \xmapsto{text}
 
 % *********************************************************
 % 						Theorem styles
