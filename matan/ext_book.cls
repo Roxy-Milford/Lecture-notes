@@ -43,7 +43,8 @@
 \usepackage{amsthm}                     % for math
 %\usepackage{biblatex}                   % for bibliografy
 \usepackage{enumitem}                   % for beautiful enumeration
-\usepackage{tikz}                       % for beautiful vector images
+\usepackage{tikz}                       % for beautiful math images
+\usetikzlibrary{patterns}				% for field figurs
 %\usepackage{tkz-fct}  					% for function ploting
 \usepackage{pgfplots}					% for function ploting
 \pgfplotsset{compat = newest}			% use last version of {pgfplots}
