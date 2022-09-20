@@ -6,7 +6,7 @@
 % *********************************************************
 % 					Ідентифікуємо клас
 % *********************************************************
-\ProvidesClass{ext_book}[2022/08/31 v2.1 Книга по лекційним записам (матан)]
+\ProvidesClass{ext_book}[2022/08/31 v2.1 Книга по лекційним записам (theorver)]
 \NeedsTeXFormat{LaTeX2e} % потрібний формат який був там, звідки я все скатав
 
 
@@ -69,7 +69,7 @@
 \newtheorem{definition}{\indent Означення}[chapter]
 \newtheorem{algorithm}{\indent Алгоритм}[chapter] 	 				% Оточення алгоритму
 \newtheorem{problem}{\indent Задача}[chapter]  						% Оточення задачі
-\newtheorem{example}{\indent Приклад}[chapter]  					% Оточення прикладу
+\newtheorem{example}{\indent Приклади:}[chapter]  					% Оточення прикладу
 \newtheorem*{remark}{\indent Зауваження}							% Оточення зауваження
 \newtheorem*{solution}{\indent \normalfont \textit{Розв'язання}}	% Оточення розвязку
 \newtheorem{corollary}{\indent Наслідок}[theorem]							% Оточення наслідку
