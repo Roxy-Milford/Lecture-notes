@@ -1,12 +1,12 @@
-PWD /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom
+PWD /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.tex
-OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.log
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/ext_book.cls
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/ext_book.cls
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.tex
+OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.log
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/ext_book.cls
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/ext_book.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -285,9 +285,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux
-OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.aux
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.aux
+OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -300,21 +300,21 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.pdf
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/title.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/title.tex
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.pdf
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/title.tex
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/title.tex
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm2488.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx2488.tfm
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.toc
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.toc
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.toc
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.toc
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1000.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -328,70 +328,36 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.toc
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_01.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_01.tex
+OUTPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.toc
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Chapters/chap_01.tex
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Chapters/chap_01.tex
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm2074.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx2074.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm
-INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm
-INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/labx1200.tfm
-INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/lati1000.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm0700.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/larm0500.tfm
+INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/lati1000.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/lati0700.tfm
 INPUT /home/serhii/.texlive2019/texmf-var/fonts/tfm/lh/lh-t2a/lati0500.tfm
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_02.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_02.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_03.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_03.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_04.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_04.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_05.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Chapters/ch_05.tex
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.aux
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
-INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/algeom/Algeom.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.aux
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
+INPUT /home/serhii/Documents/code_samples/git projects/Lecture-notes/complex_analysis/Complex_analysis.out
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb
-INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb
-INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb
-INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfti0700.pfb
 INPUT /usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb
