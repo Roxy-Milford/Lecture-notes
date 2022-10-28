@@ -1,0 +1,165 @@
+\chapter{Введення в дискретну математику}
+
+\section{Метод математичної індукції.}
+
+\begin{center}
+    Аксіоматика Парно:
+\end{center}
+
+1) $1 \in \mathbb{N}$\par
+2) $a \in \mathbb{N} \Rightarrow S(a) \in \mathbb{N}$\par
+3) $\nexists a \in \mathbb{N}: S(a) = 1$\par
+4) $S(a) = C \wedge S(b) = c \Leftrightarrow a = b$\par
+5) $P(1) \wedge P(k) \Rightarrow P(S(k)) \Rightarrow \forall n \in \mathbb{N}: P(n)$\par
+
+де $S$ --- функція наступного числа ($S(x) = x+1$), P --- предикат, $P(1)$ --- база індукції,
+$P(S(k))$ --- перехід.
+
+\begin{center}
+    Метод математичної індукції:
+\end{center}
+
+1) Перевірии, що тверждення виконується для 1.
+2) Припустити, що твердження виконується для деякого $k$, довести, що воно виконується для $k+1$.
+
+\begin{example}~
+    \begin{enumerate}
+        \item $n^3 + 5n \divby 6$ для будь якгого $n$.
+        \begin{enumerate}
+            \item $n = 1, 1^3+5=6 \divby 6$.
+            \item Нехай вірно для $k$, тоді $k^3 +5k \divby 6$. Доведемо,
+            що $(k+1)^3 +5(k+1) \divby 6$.
+            \begin{proof}
+                $k^3 + 3k^2 + 3k + 1 + 5k + 5 = (k^3+5k) + (1+5) + 3k(k+1)$,
+                де $(k^3+5k) \divby 6$, $(1+5) \divby 6$, $3k(k+1) \divby 6$
+            \end{proof}
+        \end{enumerate}
+    
+        \item Довести, що $1^2 + 2^2 + 3^2 + ... + n^2 = \dfrac{n(n+1)(2n+1)}{6}$.
+        \begin{enumerate}
+            \item $n = 1, 1^2 = \dfrac{1(1 + 1)(2 \cdot 1 + 1)}{6}$.
+            \item Нехай вірно для $k$, тоді $1^2 + 2^2 + 3^2 + ... + k^2 = \dfrac{k(k+1)(2k+1)}{6}$. Доведемо,
+            для $(k+1)$.
+            \begin{proof}
+                $1^2 + 2^2 + 3^2 + ... + (k+1)^2
+                = \dfrac{(k+1)((k+1)+1)(2(k+1)+1)}{6}
+                = \dfrac{(k+1)(k+2)(2k+3)}{6}$
+
+                $\dfrac{k(k+1)(2k+1)}{6} + (k+1)
+                = \dfrac{(k+1)(k+2)(2k+3)}{6}$
+
+                $(k + 1)(k + 2)(2k + 3) + 6k^2 + 12k + 6
+                = (k^2 + 3k + 2)(2k + 3)
+                = (k^2 + k)(2k + 1) + 6k^2 + 12k + 6
+                = 2k^3 + 3k^2 + 6k^2 + 9k + 4k + 6
+                = 2k^3 + k^2 + 2k^2 + k + 6k^2 + 12k + 6$
+            \end{proof}
+        \end{enumerate}
+
+        \item Довести, що для довільного $n \geqslant 3 2^n > 2n + 1$.
+        \begin{enumerate}
+            \item $n = 3, 2^3 > 7$.
+            \item Нехай вірно для $k$, тоді $2^k > 2k + 1$. Доведемо,
+            що $2^{k+1} > 2(k+1) + 1$.
+            \begin{proof}
+                $2^{k+1} + 1 = 2k + 3 = (2k + 1) + 2$
+
+                $2^k +2 > (2k + 1) + 2, 2^{k+1} > 2^k + 2, 2^k > 2, k \geqslant 3$
+            \end{proof}
+        \end{enumerate}
+    \end{enumerate}
+\end{example}
+
+\section{Теорія множин}
+
+\begin{definition}
+    \textbf{Множина $(set)$} --- це певна сукупність об'єктів, які ми можемо розрізнити між
+    собою, які не повторюються, та об'єднані в одне ціле нашим бажанням.
+\end{definition}
+
+\subsection*{Способи подання множин:}
+
+\begin{enumerate}
+    \item Явний, $A = \{a, b, ..., z\}$.
+    \item Не явний, нехай $P(x)$ --- певна властивість (предикат), $X = \{x: P(x)\} = \{x \mid P(x)\}$.
+    \item Графічний (діаграма Ойлера Венна)
+\end{enumerate}
+
+\subsection*{Стандартні множини:}
+
+\begin{itemize}
+    \item $\varnothing$ --- порожня множина.
+    \item $\mathbb{U}$ --- універсум (всі об'єкти).
+    \item $\mathbb{N} = \{1, 2, 3, ...\}$ ---натуральні числа (не 0).
+    \item $\mathbb{N}_0 = \{0, 1, 2, 3, ...\}$ --- усі невід'ємні цілі числа.
+    \item $\mathbb{Z} = \{0, \pm 1, \pm 2, ...\}$ --- усі цілі числа.
+    \item $\mathbb{Q} = \{\dfrac{m}{n} \mid m \in \mathbb{Z}, n \in \mathbb{N}\}$ --- раціональні числа.
+    \item $\mathbb{R}$ --- дійсні числа.
+    \item $\mathbb{C}$ --- комплексні числа.
+\end{itemize}
+
+\subsection*{Деякі позначення:}
+
+\begin{itemize}
+    \item Належність $a \in A$.
+    \item Не належність $a \not\in A$.
+    \item Включення $A \subseteq B$ (всі елементи $A$ належать $B$).
+    
+    $(A \subseteq B) \Leftrightarrow (\forall a \quad a \in A \Rightarrow a \in B)$.
+
+    \item Строге включення $A \subset B$ (всі елементи $A$ належать $B$).
+    
+    $(A \subset B) \Leftrightarrow (A \subseteq B) \& (\exists b \in B: b \not\in A)$.
+
+    \item Рівність $A = B$, якщо $A$ і $B$ складається з однакових елементів.
+    
+    $(A = B) \Leftrightarrow (A \subseteq B) \& (B \subseteq A)$.
+\end{itemize}
+
+\subsection*{Операції над множинами:}
+
+\begin{enumerate}
+    \item Об'єднання:
+    
+    $C = A \cup B = \{x: (x \in A) \vee (x \in B)\}$.
+
+    \item Перетин:
+    
+    $D = A \cap B = \{x: (x \in A) \wedge (x \in B)\}$.
+
+    \item Різниця:
+    
+    $E = A \setminus B = \{x: (x \in A) \wedge (x \not\in B)\}$.
+
+    \item Симетрична різниця:
+    
+    $F = A \delta B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (B \cap A)$.
+
+    \item Доповнення (до універсуму $\mathbb{U}$):
+    
+    $\overline{A} = \{x: x \not\in A\}$.
+\end{enumerate}
+
+\subsection*{Парадокс Бертрана:}
+
+Нехай $Y = \{X: X \not\in X\}$, де $X$ --- це множина множин і/чи елементів, що не належить собі. Тоді, з'являється питання $Y \in Y$?
+
+\section{Алгебраїчні властивості операцій над множинами}
+
+\begin{enumerate}
+    \item Інволютивність
+    \item Комутативність
+    \item Асоціативність
+    \item Дистрибутивність
+    \item Правило поглинання
+    \item Закон Деморгана
+    \item Інші
+\end{enumerate}
+
+
+
+
+
+
+
+
