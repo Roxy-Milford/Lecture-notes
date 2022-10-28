@@ -1,0 +1,7 @@
+\babel@toc {ukrainian}{}
+\contentsline {chapter}{\numberline {1}Введення в математичний аналіз}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Най простіші логічні символи, квантори}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Поняття множини, операції над множинами}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Поняття бінарного відношення. Відношення порядку. Функціональне відношення}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Відображення(функція). Образ та прообраз множини. Класифікація відображень}{6}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Зворотнє відображення та композиція відображень.}{8}{section.1.5}%
