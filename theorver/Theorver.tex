@@ -1,0 +1,47 @@
+\documentclass{ext_book}  
+
+%\input{../packages}  		% Додаткові пакети вносіть у цей файл
+%\input{../redefinitions} 	% Додаткові визначення та перевизначення команд вносіть у цей файл
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Титульна сторінка %%%%%%%%%%%%%%%%%%%
+\input{title}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Зміст %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{page}{1}    %!!! -- продумати, як автоматизувати номер сторінки
+
+%\begingroup
+%\let\cleardoublepage\relax
+%\let\clearpage\relax
+\tableofcontents
+%\endgroup
+
+%%% \cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%% Вступ %%%%%%%%%%%%%%%%%%%%%
+%\input{intro}
+
+
+%%%%%%%%%%%%%%%%%%%%% Основна частина %%%%%%%%%%%%%%%%%%%%%
+\input{Chapters/p_01}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Висновки %%%%%%%%%%%%%%%%%%%%%%%%
+%%% \conclusions
+%%% \input{conclusions}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Бібліографія %%%%%%%%%%%%%%%%%%%%%%%
+%\begin{thebibliography}{9}
+%\input{bibliography} 
+%\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Додатки %%%%%%%%%%%%%%%%%%%%%%%%%
+%%% \input{algeom/appendix}
+
+\end{document}
