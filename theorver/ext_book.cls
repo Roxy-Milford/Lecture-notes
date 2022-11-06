@@ -69,7 +69,7 @@
 \newtheorem{definition}{\indent Означення}[chapter]
 \newtheorem{algorithm}{\indent Алгоритм}[chapter] 	 				% Оточення алгоритму
 \newtheorem{problem}{\indent Задача}[chapter]  						% Оточення задачі
-\newtheorem{example}{\indent Приклади:}[chapter]  					% Оточення прикладу
+\newtheorem{example}{\indent Приклад:}[chapter]  					% Оточення прикладу
 \newtheorem*{remark}{\indent Зауваження}							% Оточення зауваження
 \newtheorem*{solution}{\indent \normalfont \textit{Розв'язання}}	% Оточення розвязку
 \newtheorem{corollary}{\indent Наслідок}[theorem]							% Оточення наслідку
