@@ -70,6 +70,7 @@
 \newtheorem{algorithm}{\indent Алгоритм}[chapter] 	 				% Оточення алгоритму
 \newtheorem{problem}{\indent Задача}[chapter]  						% Оточення задачі
 \newtheorem{example}{\indent Приклад:}[chapter]  					% Оточення прикладу
+\newtheorem{examples}{\indent Приклад:}[chapter]  					% Оточення прикладу
 \newtheorem*{remark}{\indent Зауваження}							% Оточення зауваження
 \newtheorem*{solution}{\indent \normalfont \textit{Розв'язання}}	% Оточення розвязку
 \newtheorem{corollary}{\indent Наслідок}[theorem]							% Оточення наслідку
@@ -89,7 +90,7 @@
 %  \mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
 %}
 %\newcommand*{\xor}{\ensuremath \oplus}                              % \xor = (+)
-
+\newcommand*{\beautifulImage}{\begin{center} \framebox{Beautifull Image} \end{center}}
 
 % *********************************************************
 %  					User math operators
